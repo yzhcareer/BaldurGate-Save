@@ -1,7 +1,10 @@
-_pycache_
-_pycache_/*
+__pycache___
+__pycache__/*
 bare
 bare/*
 .DS_Store
 .ipynb_checkpoints/
 .ipynb_checkpoints/*
+*.bg1bpsave
+*.bg1save
+*.bg1character

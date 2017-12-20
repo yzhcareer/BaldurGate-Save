@@ -4,6 +4,7 @@ class Items:
 
     class AMULETS(Enum):
 
+        Sensate_Amulet = 'WA2AMU'
         Necklace_of_Missiles = 'AMUL01'
         Necklace = 'AMUL02'
         Studded_Necklace_with_Zios_Gems = 'AMUL04'
@@ -23,14 +24,14 @@ class Items:
         Wolfsbane_Charm_PLUS2_vs_Lycanthropes = 'AMUL18'
         Amulet_of_5 = 'AMUL19'
         Kaliguns_Amulet_of_Magic_Resistance = 'AMUL20'
-        Amulet_of_Power = 'AMUL21'
+        Amulet_of_Power = 'AMUL21'  # best
         Periapt_of_Proof_Against_Poison = 'AMUL22'
         Periapt_of_Life_Protection = 'AMUL23'
         Necklace_of_Form_Stability = 'AMUL24'
         Amulet_of_Spell_Warding = 'AMUL25'
-        Amulet_of_Cheetah_Speed = 'AMUL26'
-        Amulet_of_Seldarine = 'AMUL27'
-        Amulet_of_the_Master_Harper = 'AMUL28'
+        Amulet_of_Cheetah_Speed = 'AMUL26'  # good
+        Amulet_of_Seldarine = 'AMUL27'  # good
+        Amulet_of_the_Master_Harper = 'AMUL28' # good
 
     class ARROWS(Enum):
 
@@ -298,8 +299,9 @@ class Items:
         Chain_Mail_PLUS3_1 = 'CHAN21'
         Corthala_Family_Armor = 'NPCHAN'
 
-    class ROBES(Enum):
-
+    
+    class CLOAKS(Enum):
+        
         Cloak_of_Protection_PLUS1 = 'CLCK01'
         Cloak_of_Protection_PLUS2 = 'CLCK02'
         Cloak_of_Displacement = 'CLCK03'
@@ -307,7 +309,24 @@ class Items:
         Cloak_of_Balduran = 'CLCK05'
         Cloak_of_NonDetection = 'CLCK06'
         Nymph_Cloak = 'CLCK07'
-        Algernons_Cloak = 'CLCK08'
+        Algernons_Cloak = 'CLCK08' 
+        Cloak_of_the_Shield = 'CLCK20'
+        Holy_cloak = 'CLCK21'
+        Shandalars_cloak = 'CLCK22'
+        Cloak_of_Elvenkind = 'CLCK23'
+        Cloak_of_Reflection = 'CLCK24'
+        Cloak_of_the_Stars = 'CLCK25'
+        Cloak_of_Mirroring = 'CLCK26'
+        Cloak_of_the_Sewers = 'CLCK27'
+        Shadow_Thief_Cloak = 'CLCK28'
+        Cloak_of_Bravery = 'CLCK30'
+        Improved_Cloak_of_Protection_PLUS2 = 'CLCK31'
+        Montolios_Cloak = 'CLCK32'
+        Cloak_of_the_High_Forest = 'NPCLCK'
+    
+    
+    class ROBES(Enum):
+
         Mage_Robe_of_Cold_Resistance = 'CLCK09'
         Mage_Robe_of_Fire_Resistance = 'CLCK10'
         Mage_Robe_of_Electrical_Resistance = 'CLCK11'
@@ -318,22 +337,14 @@ class Items:
         Robe_of_the_Neutral_Archmagi = 'CLCK16'
         Robe_of_the_Evil_Archmagi = 'CLCK17'
         Knaves_Robe_1 = 'CLCK18'
-        Robe_of_the_Good_Archmagi_1 = 'CLCK19'
-        Cloak_of_the_Shield = 'CLCK20'
-        Holy_cloak = 'CLCK21'
-        Shandalars_cloak = 'CLCK22'
-        Cloak_of_Elvenkind = 'CLCK23'
-        Cloak_of_Reflection = 'CLCK24'
-        Cloak_of_the_Stars = 'CLCK25'
-        Cloak_of_Mirroring = 'CLCK26'
-        Cloak_of_the_Sewers = 'CLCK27'
-        Shadow_Thief_Cloak = 'CLCK28'
-        Robe_of_the_Apprenti = 'CLCK29'
-        Cloak_of_Bravery = 'CLCK30'
-        Improved_Cloak_of_Protection_PLUS2 = 'CLCK31'
-        Montolios_Cloak = 'CLCK32'
+        Robe_of_the_Good_Archmagi_1 = 'CLCK19'       
+        Robe_of_the_Apprenti = 'CLCK29'   
         Jansen_AdventureWear = 'NPARM'
-        Cloak_of_the_High_Forest = 'NPCLCK'
+        Robe_of_Vecna = 'WA2ROBE'
+
+        
+    class COMPONENTS(Enum):
+        
         Liquid_Mercury = 'COMPON01'
         Eye_of_Tyr = 'COMPON02'
         Fflars_Scabbard = 'COMPON03'
@@ -353,6 +364,9 @@ class Items:
         Circlet_of_Netheril = 'COMPON17'
         White_Dragon_Scales = 'COMPON18'
         Blue_Dragon_Scales = 'COMPON19'
+        
+    class TOMES(Enum):
+        
         Golem_Manual = 'TOME01'
         Clay_Golem_Manual = 'TOME02'
         Clay_Golem_Page = 'TOME02A'
@@ -472,6 +486,8 @@ class Items:
         Ravager_PLUS4 = 'HALB10'
         Ravager_PLUS6 = 'HALB11'
         Halberd_PLUS3 = 'HALB12'
+        Harmonium_Halberd = 'WA2HALB'
+
 
     class HAMMERS(Enum):
 
@@ -520,6 +536,10 @@ class Items:
         Wong_Feis_Ioun_Stone = 'HELM34'
         Hrothgars_Axe_PLUS3 = 'WAAXE'
         Defender_of_Easthaven_PLUS2 = 'WAFLAIL'
+        Vhailors_Helm = 'WA2HELM'
+        
+    class IWD(Enum):
+        
         Jerrods_Mace = 'WAMACE'
         Scarlet_NinjaTo_PLUS3 = 'WANINJA'
         Jorils_Dagger_PLUS3 = 'WAS2H'
@@ -604,10 +624,22 @@ class Items:
         The_Lanthorn = 'C6LANTHO'
         Deck_of_Many_Things = 'DECK'
         Shakti_Figurine = 'FIGURE01'
-        Blue_Globes = 'GLOBBLU1 to GLOBBLU4'
-        Red_Globes = 'GLOBRED1 to GLOBRED4'
-        Green_Globes = 'GLOBGRE1 to GLOBGRE4'
-        Purple_Globes = 'GLOBPUR1 to GLOBPUR4'
+        Blue_Globes_1 = 'GLOBBLU1'
+        Blue_Globes_2 = 'GLOBBLU2'
+        Blue_Globes_3 = 'GLOBBLU3'
+        Blue_Globes_4 = 'GLOBBLU4'
+        Red_Globes_1 = 'GLOBRED1'
+        Red_Globes_2 = 'GLOBRED2'
+        Red_Globes_3 = 'GLOBRED3'
+        Red_Globes_4 = 'GLOBRED4'
+        Green_Globes_1 = 'GLOBGRE1'
+        Green_Globes_2 = 'GLOBGRE2'
+        Green_Globes_3 = 'GLOBGRE3'
+        Green_Globes_4 = 'GLOBGRE4'
+        Purple_Globes_1 = 'GLOBPUR1'
+        Purple_Globes_2 = 'GLOBPUR2'
+        Purple_Globes_3 = 'GLOBPUR3'
+        Purple_Globes_4 = 'GLOBPUR4'
         Ring_of_Invisibility = 'MAGE01'
         Ring_of_Barkskin = 'MAGE02'
         Ring_of_Mirror_Image = 'MAGE03'
@@ -951,7 +983,7 @@ class Items:
         Tears_of_Bhaal_3 = 'MISCB8'
         Tears_of_Bhaal_4 = 'MISCB9'
         Tears_of_Bhaal_5 = 'MISCBA'
-        Blackrazor_Long_Sword_PLUS3 = 'MISCBC'
+    
         Dog_Bones = 'MISCBD'
         Gilded_Rope = 'MISCBE'
         Jaellat_Wardstone = 'MISCBF'
@@ -980,6 +1012,8 @@ class Items:
         Drow_Note_of_Gate_Sundering = 'MISCCC'
         Jansen_Spectroscopes = 'NPMISC1'
         Jansen_TechnoGloves = 'NPMISC2'
+        Harp_of_Pandemonium = 'WA2HARP'
+
 
     class FULL_PLATE_ARMORS(Enum):
 
@@ -1006,6 +1040,8 @@ class Items:
         Shuruppaks_Plate = 'PLAT22'
         Full_Plate_Mail_PLUS2 = 'PLAT23'
         Firecam_FullPlate_Armor = 'NPPLAT'
+        Plate_of_Balduran = 'WA2PLAT
+
 
     class PLOT_ITEMS(Enum):
 
@@ -1197,6 +1233,7 @@ class Items:
         Delryn_Family_Ring = 'RING45'
         Ring_of_AntiVenom = 'RING46'
         DArnisse_Signet_Ring = 'NPRING01'
+        Mercykiller_Ring = 'WA2RING'
 
     class RODS(Enum):
 
@@ -1486,6 +1523,7 @@ class Items:
         Darksteel_Shield_PLUS4 = 'SHLD31'
         Shield_of_the_Order_PLUS4 = 'SHLD32'
         Delryn_Family_Shield = 'NPSHLD'
+        Shield_of_Balduran = 'WA2SHIEL'
 
     class SLINGS(Enum):
 
@@ -1493,7 +1531,7 @@ class Items:
         Sling_PLUS1 = 'SLNG02'
         Sling_PLUS3 = 'SLNG03'
         Sling_PLUS2 = 'SLNG04'
-        Sling_PLUS3__Arlas_Dragonbane = 'SLNG05'
+        Sling_PLUS3_Arlas_Dragonbane = 'SLNG05'
         Sling_of_Arvoreen_PLUS4 = 'SLNG06'
         Sling_of_Seeking_PLUS2 = 'SLNG07'
         Erinne_Sling_PLUS4 = 'SLNG08'
@@ -1546,6 +1584,7 @@ class Items:
 
     class ONE_HANDED_SWORDS(Enum):
 
+        Blackrazor_Long_Sword_PLUS3 = 'MISCBC'
         Bastard_Sword = 'SW1H01'
         Bastard_Sword_PLUS1 = 'SW1H02'
         Bastard_Sword_PLUS1_PLUS3_vs_Shapeshifters = 'SW1H03'
@@ -1631,16 +1670,8 @@ class Items:
         Corthala_Family_Blade_PLUS2 = 'NPSW04'
         Entropy = 'NPSW05'
         Chaos_Blade = 'NPSW06'
-        Sensate_Amulet = 'WA2AMU'
         Dakkons_Zerth_Blade = 'WA2DAK'
-        Harmonium_Halberd = 'WA2HALB'
-        Harp_of_Pandemonium = 'WA2HARP'
-        Vhailors_Helm = 'WA2HELM'
-        Plate_of_Balduran = 'WA2PLAT'
-        Mercykiller_Ring = 'WA2RING'
-        Robe_of_Vecna = 'WA2ROBE'
         Sword_of_Balduran_1 = 'WA2S1H'
-        Shield_of_Balduran = 'WA2SHIEL'
 
     class TWO_HANDED_SWORDS(Enum):
 
