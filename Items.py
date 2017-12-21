@@ -69,6 +69,8 @@ class Items:
         Axe_of_the_Unyielding_PLUS5 = 'AX1H15'
         Klogarath_PLUS4 = 'AX1H16'
         Battle_Axe_PLUS3 = 'AX1H17'
+        Beruel_Retort_PLUS1 = 'AX1H18'
+        The_Golden_Axe_PLUS1 = 'AX1H19'
 
     class BAGS(Enum):
 
@@ -94,6 +96,9 @@ class Items:
         Belt_of_Inertial_Barrier = 'BELT10'
         Girdle_of_Fire_Giant_Strength = 'BELT11'
         Imoens_Belt = 'MEL01'
+        Belt_of_Antipde = 'BELT16'
+        Adoys_Belt = 'NEBELT01'
+        Big_Fisted_Belt = 'BELT15'
 
     class BLUNT_WEAPONS(Enum):
 
@@ -145,6 +150,9 @@ class Items:
         Mace_PLUS3 = 'BLUN33'
         Morning_Star_PLUS3 = 'BLUN34'
         Ice_Star_PLUS4 = 'BLUN35'
+        Club_PLUS1 = 'BLUN36'
+        The_Thresher_PLUS2 = 'BLUN39'
+        The_Stupefier_PLUS1 = 'BLUN41'
 
     class BOLTS(Enum):
 
@@ -202,6 +210,7 @@ class Items:
         Boots_of_Etherealness = 'BOOT11'
         Gargoyle_Boots = 'BOOT12'
         Drizzts_Boots_of_Speed = 'BOOTDRIZ'
+        Moonlight_walkers = 'RSBOOT'
 
     class BOWS(Enum):
 
@@ -264,6 +273,7 @@ class Items:
         Bards_Gloves = 'BRAC24'
         Wondrous_Gloves = 'BRAC25'
         TzuZans_Bracers = 'BRAC26'
+        Glimmering_Bands = 'RSBRAC'
 
     class BULLETS(Enum):
 
@@ -487,6 +497,7 @@ class Items:
         Ravager_PLUS6 = 'HALB11'
         Halberd_PLUS3 = 'HALB12'
         Harmonium_Halberd = 'WA2HALB'
+        The_Chesley_Crusher_PLUS2 = 'HALB13'
 
 
     class HAMMERS(Enum):
@@ -503,6 +514,7 @@ class Items:
         Runehammer_PLUS4 = 'HAMM10'
         Runehammer_PLUS5 = 'HAMM11'
         War_Hammer_PLUS3 = 'HAMM12'
+        Hammer_of_Dawn_PLUS1 = 'HAMM13'
 
     class HELMS(Enum):
 
@@ -615,6 +627,7 @@ class Items:
         Human_Flesh = 'LEAT22'
         Studded_Leather_of_Thorns_PLUS6 = 'LEAT23'
         Grandmasters_Armor_PLUS6 = 'LEAT24'
+        Rugged_Leathers_PLUS2 = 'LEAT25'
 
     class MISC(Enum):
 
@@ -1039,8 +1052,9 @@ class Items:
         Enkidus_Full_Plate_PLUS3 = 'PLAT21'
         Shuruppaks_Plate = 'PLAT22'
         Full_Plate_Mail_PLUS2 = 'PLAT23'
+        The_Magma_Bulwark_PLUS2 = 'PLAT24'
         Firecam_FullPlate_Armor = 'NPPLAT'
-        Plate_of_Balduran = 'WA2PLAT
+        Plate_of_Balduran = 'WA2PLAT'
 
 
     class PLOT_ITEMS(Enum):
@@ -1524,6 +1538,7 @@ class Items:
         Shield_of_the_Order_PLUS4 = 'SHLD32'
         Delryn_Family_Shield = 'NPSHLD'
         Shield_of_Balduran = 'WA2SHIEL'
+        Buckleys_Buckler = 'SHLD33'
 
     class SLINGS(Enum):
 
@@ -1537,6 +1552,7 @@ class Items:
         Erinne_Sling_PLUS4 = 'SLNG08'
         Erinne_Sling_PLUS5 = 'SLNG09'
         Sling_PLUS3_1 = 'SLNG10'
+        Sling_of_UNERRING_ACCURACY = 'SLING11'
 
     class SPEARS(Enum):
 
@@ -1580,7 +1596,9 @@ class Items:
         Staff_of_the_Ram_PLUS6 = 'STAF22'
         Serpent_Shaft = 'STAF23'
         Quarter_Staff_PLUS3 = 'STAF24'
+        The_Ossifier = 'STAF25'
         Staff_of_the_High_Forest = 'NPSTAF'
+        Neera_Staff = 'STAFN1'
 
     class ONE_HANDED_SWORDS(Enum):
 
@@ -1664,6 +1682,7 @@ class Items:
         Katana_PLUS3 = 'SW1H75'
         Scimitar_PLUS3 = 'SW1H76'
         The_Answerer_PLUS4 = 'SW1H77'
+        Harrower_PLUS1 = 'SW1H79'
         Sword_of_Arvoreen = 'NPSW01'
         Katana_PLUS1_1 = 'NPSW02'
         Hallowed_Redeemer_PLUS2 = 'NPSW03'
@@ -1698,6 +1717,7 @@ class Items:
         Psions_Blade_PLUS5 = 'SW2H21'
         Cursed_Berserking_Sword_PLUS3 = 'SW2H99'
         Soul_Reaver_PLUS4 = 'SW2HDEAT'
+        Rancor = 'SW2HD1'
 
     class WANDS(Enum):
 
