@@ -1,5 +1,6 @@
 from enum import Enum
 from Tables import Tables
+import re
 
 
 class BaseOps:
@@ -35,7 +36,10 @@ class BaseTable(BaseOps, Enum):
                               self.order)
     
     def getString(self, buffer, mismatch=0):
-        return re.sub(r'[\x00-\x1f\x7f-\x9f]', '', str(self.getBytes(buffer, mismatch), encoding='utf-8'))
+        _s = self.getBytes(buffer, mismatch)
+        for _i, _c in enumerate(_s):
+            if _c < 32 or _c > 127:
+                return str(_s[:_i], encoding='UTF-8')
         
     def setValue(self, buffer, new_value, mismatch=0):
         if isinstance(new_value, Enum):
@@ -46,6 +50,8 @@ class BaseTable(BaseOps, Enum):
                                                      self.signed,
                                                      self.order) 
     
+    def incValue(self, buffer, inc_value, mismatch=0):
+        self.setValue(buffer, self.getValue(buffer, mismatch) + inc_value, mismatch)
 
     def getRepr(self, buffer, mismatch=0, parent=Tables):
         _value = self.getValue(buffer, mismatch)
