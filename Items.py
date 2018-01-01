@@ -1552,7 +1552,7 @@ class Items:
         Erinne_Sling_PLUS4 = 'SLNG08'
         Erinne_Sling_PLUS5 = 'SLNG09'
         Sling_PLUS3_1 = 'SLNG10'
-        Sling_of_UNERRING_ACCURACY = 'SLING11'
+        Sling_of_UNERRING_ACCURACY = 'SLNG11'
 
     class SPEARS(Enum):
 
