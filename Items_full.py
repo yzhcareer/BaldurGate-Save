@@ -30,6 +30,10 @@ class Items:
         Amulet_of_Cheetah_Speed = 'AMUL26'  # good
         Amulet_of_Seldarine = 'AMUL27'  # good
         Amulet_of_the_Master_Harper = 'AMUL28' # good
+        Talisman_of_the_Hearthfire = 'OHNAMUL1'
+        Wooden_Horse_Necklace = 'OHNAMUL2'
+        Brooch_of_the_Vagrant_Blades = 'OHRAMUL1'
+        Archer_Eyes = 'BDAMUL02'
 
     class RINGS(Enum):
         Holy_Symbol_of_Lathander = 'BELT12'
@@ -80,6 +84,7 @@ class Items:
         Mercykiller_Ring = 'WA2RING'
         The_Claw_of_Kazgaroth = 'MISC72'
         Heartwood_Ring = 'RING44'
+        Ring_of_Duplication = 'OHRRING1'
         
     class BRACERS(Enum):
         Bracers_of_Defense_AC_8 = 'BRAC01'
@@ -132,6 +137,7 @@ class Items:
         Big_Fisted_Belt = 'BELT15'
         Ox_Tail_Belt = 'OHRBELT1'
         Belt_of_Minor_Invulnerability = 'OHRBELT2'
+        Belt_of_Skillful_Blade = 'BDBELT02'
         Imoens_Belt = 'IMOENHP1'
         Imoens_Belt_1 = 'MEL01'
         
@@ -199,6 +205,8 @@ class Items:
         Defender_of_Easthaven_PLUS2 = 'WAFLAIL'
         Vhailors_Helm = 'WA2HELM'
         Headband_of_the_Devout = 'OHRHELM1'
+        Eilistraee_Boom_PLUS1 = 'BAND03'
+        Circlet_of_the_Archmage = 'BAND04'
         Fallen_Archer = 'WINGS01'
         Fallen_Archer_1 = 'WINGS01B'
         Jansen_Spectroscopes = 'NPMISC1'
@@ -213,6 +221,9 @@ class Items:
         Helm_of_the_Noble_PLUS1_1 = 'PALHELM'
         Helmet_14 = 'MISC9P'
         Patrol_Leaders_Helmet = 'MISCA6'
+        Thayan_Circlet = 'OHNHELM1'
+        Helmet_of_Dumathoin = 'BDHELM09'
+        Bard_Hat = 'BDHELM11'
         
     class AXES(Enum):
         Battle_Axe = 'AX1H01'
@@ -292,6 +303,13 @@ class Items:
         Spear_of_Kuldahar_PLUS3 = 'WASPEAR'
         
     class STAVES(Enum):
+        Narbucchad_Demise = 'PSTAFM2'
+        Narbucchad_Demise_PLUS1_2 = 'PSTAFM0E'
+        Narbucchad_Demise_PLUS1 = 'PSTAFM0D'
+        Narbucchad_Demise_PLUS2 = 'PSTAFM0C'
+        Narbucchad_Demise_PLUS3 = 'PSTAFM0B'
+        Narbucchad_Demise_PLUS4 = 'PSTAFM0'
+        Narbucchad_Demise_PLUS5 = 'PSTAFM1'
         Quarterstaff = 'STAF01'
         Quarterstaff_PLUS1 = 'STAF02'
         Quarterstaff_1 = 'STAF03'
@@ -431,6 +449,8 @@ class Items:
         Sword_of_Balduran_2 = 'WA2S1H'
         Drow_Long_Sword_PLUS3 = 'DWSW1H02'
         The_Vampires_Revenge_PLUS1 = 'SW1H19'
+        Viper_Edge_PLUS2 = 'SW1P01'
+        Void_Sword_PLUS3 = 'BDSW1H06'
         
     class BASTARDSWORDS(Enum):
         Bastard_Sword = 'COMPS01'
@@ -512,6 +532,7 @@ class Items:
         Soul_Reaver_PLUS4_1 = 'SW2HDEAT'
         Two_handed_Sword_5 = 'TTSWORD2'
         Jorils_Dagger_PLUS3 = 'WAS2H'
+        Dragon_Blade_PLUS3 = 'BDSW2H01'
         
     class SCIMITAR(Enum):
         Scimitar_PLUS1 = 'OHHSCIM'
@@ -571,6 +592,7 @@ class Items:
         Club_of_Detonation_PLUS3 = 'BLUN26'
         Club_of_Detonation_PLUS5 = 'BLUN27'
         Club_PLUS3 = 'BLUN31'
+        Chanser_Fish = 'BLUN40'
         Marduuks_Mallet_PLUS3 = 'OHBBLUN1'
         Club_PLUS1 = 'OHBLUN50'
         Club_PLUS2 = 'OHBLUN51'
@@ -632,7 +654,7 @@ class Items:
         War_Hammer_PLUS1 = 'HAMM02'
         War_hammer_PLUS2 = 'HAMM03'
         Warhammer_PLUS1PLUS4_vs_giant_humanoids = 'HAMM04'
-        War_Hammer_PLUS2 = 'HAMM05'
+        War_Hammer_Ashideena_PLUS2 = 'HAMM05'
         Dwarven_Thrower_PLUS3 = 'HAMM06'
         Dwarven_Warhammer_of_Thunderbolts_PLUS3 = 'HAMM07'
         War_Hammer_PLUS2_1 = 'HAMM08'
@@ -644,7 +666,8 @@ class Items:
         Aegis_fang_PLUS3 = 'AEGIS'
         Aegis_fang_PLUS3_1 = 'AEGIS2'
         The_Brick_PLUS2 = 'OHNHAMM1'
-        War_Hammer_1 = 'IHAMM01'  
+        War_Hammer_1 = 'IHAMM01' 
+        Void_Hammer_PLUS3 = 'BDHAMM02'
      
     class COMPOSITEBOWS(Enum):
         Composite_Long_Bow = 'BOW01'
@@ -745,7 +768,7 @@ class Items:
         Plate_of_the_Dark_PLUS1 = 'PLAT05'
         Ankheg_Plate_Mail = 'PLAT06'
         Plate_Mail = 'PLAT07'
-        Plate_Mail_PLUS3 = 'PLAT08'
+        Practical_Defense = 'PLAT08'
         Mithral_Field_Plate_Armor_PLUS2 = 'PLAT09'
         Plate_Mail_PLUS1_1 = 'PLAT10'
         Delvers_Plate_PLUS2 = 'PLAT11'
@@ -856,6 +879,7 @@ class Items:
         Hide_Armor_PLUS1 = 'OHLEAT50'
         Hide_Armor_PLUS2 = 'OHLEAT51'
         Hide_Armor_PLUS3 = 'OHLEAT52'
+
         
     class STUDDEDLEATHERS(Enum):
         Studded_Leather_Armor = 'ILEAT04'
@@ -873,6 +897,7 @@ class Items:
         Grandmasters_Armor_PLUS6 = 'LEAT24'
         Studded_Leather_Armor_PLUS3 = 'OHLEAT53'
         Studded_Leather_Armor_2 = 'VISLEAT2'
+        Shadow_Dragon_Scale_2 = 'OHDSCALE'
     
     class CLOAKS(Enum):
         Cloak_of_Protection_PLUS1 = 'CLCK01'
@@ -933,20 +958,24 @@ class Items:
         Mage_Robe_4 = 'VISCLCK5'
         Robe_of_the_Evil_Archmagi_1 = 'XZARCLCK'
         Noser_Uniform = 'OHBNOSHU'
+        Robe_of_Red_Flames = 'BDROBE05'
         
     class BUCKLERS(Enum):
         Buckler_PLUS2 = 'OHSHLD50'
         Buckler_PLUS3 = 'OHSHLD51'
         Buckler = 'SHLD08'
         Buckler_1 = 'SHLD08A'
+        Tarloc_Contingency_PLUS1 = 'SHLD08P'
         Buckler_2 = 'SHLD09'
         Buckler_3 = 'SHLD09A'
+        Shield_of_Devotion = 'SHLD09P'
         Buckler_4 = 'SHLD10'
         Buckler_5 = 'SHLD10A'
         Buckler_PLUS1 = 'SHLD17'
         Buckler_PLUS1_1 = 'SHLD17A'
         Kiels_Buckler = 'SHLD20'
         Buckler_PLUS1_2 = 'SKELSHLD'
+        Buckler_of_Fist = 'BDSHLD01'
         
     class SMALLSHIELDS(Enum):
         Small_Shield = 'DSHLD01'
@@ -999,10 +1028,13 @@ class Items:
         Pellans_Shield_PLUS2_1 = 'SHLD19A'
         Large_Shield = 'SHLD05'
         Large_Shield_1 = 'SHLD05A'
+        Corvyr_Blessing = 'SHLD05P'
         Large_Shield_PLUS1 = 'SHLD06'
         Large_Shield_PLUS1_1 = 'SHLD06A'
+        Redshield_PLUS1 = 'SHLD06P'
         Shield_of_the_Falling_Stars_PLUS1 = 'SHLD07'
         Shield_of_the_Falling_Stars_PLUS1_1 = 'SHLD07A'
+        Sartessa_Vengeance = 'SHLD07P'
         Large_Shield_2 = 'SHLD15'
         Large_Shield_3 = 'SHLD15A'
         Large_Shield_4 = 'SHLD16'
@@ -1013,7 +1045,7 @@ class Items:
         Large_Shield_PLUS2 = 'SHLD30'
         Large_Shield_PLUS2_1 = 'SHLD30A'
         Darksteel_Shield_PLUS4 = 'SHLD31'
-        Darksteel_Shield_PLUS4_1 = 'SHLD31A'
+        GORM_Arm = 'SHLD31A'
         
     class RODS(Enum):
         Rod_of_Absorption = 'RODS01'
@@ -1132,6 +1164,7 @@ class Items:
         Dart_PLUS3 = 'OHDART51'
         Melfs_Minute_Meteor = 'MELFMET'
         Searing_Orb = 'SORB'
+        Biter_PLUS2 = 'BDDART01'
         
     class BAGS(Enum):
         Winter_Wolf_Pelt = 'BAG01'
@@ -1181,7 +1214,8 @@ class Items:
         Scroll_Case_8 = 'BAG03I'
         Potion_Case_1 = 'BAG06B'
         Potion_Case_2 = 'BAG06C'
-        Potion_Case_3 = 'BAG06D'      
+        Potion_Case_3 = 'BAG06D' 
+        Dragomir_Respite = 'OHHBAG'
 
     class QUIVERS(Enum):
         Quiver_of_Plenty_PLUS1 = 'QUIVER01'
@@ -1191,11 +1225,12 @@ class Items:
         Bag_of_Plenty_PLUS1 = 'QUIVER05'
         Bag_of_Plenty_PLUS2 = 'QUIVER06'
         
-    class FLUTES(Enum):
+    class INSTRUMENTS(Enum):
         Magic_Flute = 'BRDFLUT1'
         Magic_Flute_1 = 'BRDFLUT2'
         Magic_Flute_2 = 'BRDFLUT3'
         Magic_Flute_3 = 'BRDFLUTE'
+        Tangled_Strings = 'BDBRD03'
         
     class TOMES(Enum):
         Tome_of_Bodily_Health_PLUS1_Con = 'BOOK03'
@@ -1687,6 +1722,8 @@ class Items:
         Empty_Potion_Bottle = 'POTN54'
         Potion_of_Superior_Healing = 'POTN55'
         Rogues_Potion_of_Frost_Giant_Strength = 'POTN56'
+        Green_Dragon_Potion = 'OHNPOTN1'
+        Potion_of_Clarivoyance = 'OHDPOTN1'
         
     class AMULETS2(Enum):       
         Sensate_Amulet = 'WA2AMU'
@@ -1696,7 +1733,6 @@ class Items:
         Sword_Medallion = 'MISCAE'
         Necklace_1 = 'MAGEAMUL'
         Harper_Amulet = 'MISC5E'
-        Brooch_of_the_Vagrant_Blades = 'OHRAMUL1'
         Ring_55 = 'SPEC01'
         Golden_Circlet = 'MISCAA'
         Thrall_Collar = 'MISC7Y'
@@ -1709,9 +1745,7 @@ class Items:
         Hexxats_Amulet_4 = 'OHHEXAM4'
         Hexxats_Amulet_5 = 'OHHEXAM5'
         Hexxats_Amulet_6 = 'OHHEXAM9'
-        Wooden_Horse_Necklace = 'OHNAMUL2'
         Ruby_Pendant_of_Beguiling = 'REGISAMU'
-        Talisman_of_the_Hearthfire = 'OHNAMUL1'
         Montolios_Clasp = 'COMPON11'
         Mithral_Medallion = 'MISC7R'
         Star_Medallion = 'MISCA9'
@@ -1735,7 +1769,6 @@ class Items:
         Stannel_Eibors_Ring = 'OHBRING1'
         Dal_Family_Ring = 'OHBRING2'
         Reaching_Ring = 'OHRINGWI'
-        Ring_of_Duplication = 'OHRRING1'
         Josephs_Greenstone_Ring = 'RINGJOS'
         Ring_of_Earth_Control_1 = 'RINGPICO'
         Sandthiefs_Ring_6 = 'ROSSLAND'
@@ -2140,6 +2173,10 @@ class Items:
         Ring_of_Mirror_Image = 'MAGE03'
         Pseudo_Ring_of_Blur = 'MAGE04'
         Pseudo_Ring_of_Free_Action = 'MAGE05'
+        Collar_Bell = 'OHNCOLL'
+        Tankard = 'OHNTANK'
+        Gem_of_Seen = 'OHRSCRL1'
+        
 
     class Exceptions(Enum):
         Winter_Wolf_Pelt = 'MISC01'
