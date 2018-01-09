@@ -651,6 +651,7 @@ class Items:
     class MACES(Enum):
         Mace = 'BLUN04'
         Mace_PLUS1 = 'BLUN05'
+        Kiels_Morningstar = 'BLUN09'
         Krotans_Skullcrusher_PLUS2 = 'BLUN11'
         Mace_of_Disruption_PLUS1 = 'BLUN12'
         Skullcrusher_PLUS3 = 'BLUN18'
