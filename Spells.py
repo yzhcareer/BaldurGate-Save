@@ -2,56 +2,56 @@ from enum import Enum
 
 class Spells:
     
-    class Magic_PALADIN(Enum):
+    class PALADIN(Enum):
 
         PALADIN_LAY_ON_HANDS = 'SPCL211'
         PALADIN_DETECT_EVIL = 'SPCL212'
         PALADIN_PROTECTION_FROM_EVIL = 'SPCL213'
         PALADIN_SUMMON_DEVA = 'SPCL923'
 
-    class Magic_SHAMAN(Enum):
+    class SHAMAN(Enum):
 
         SHAMAN_SPIRIT_FORM = 'SPCL940'
         SHAMAN_FAVORED_OF_THE_SPIRITS = 'SPCL941'
 
-    class Magic_THIEF(Enum):
+    class THIEF(Enum):
 
         THIEF_DETECT_ILLUSION = 'SPIN805'
         THIEF_SET_SNARE = 'SPCL412'
         THIEF_SET_SPECIAL_SNARE = 'SPCL414'
 
-    class Magic_TOTEMIC(Enum):
+    class TOTEMIC(Enum):
 
         TOTEMIC_DRUID_SUMMON_SPIRIT_ANIMAL = 'SPCL621'
 
-    class Magic_SHAPESHIFTER(Enum):
+    class SHAPESHIFTER(Enum):
 
         SHAPESHIFTER_SHAPESHIFT_NATURAL_FORM = 'SPIN124'
         SHAPESHIFTER_SHAPESHIFT_WEREWOLF = 'SPCL643'
         SHAPESHIFTER_SHAPESHIFT_GREATERWEREWOLF = 'SPCL644'
 
-    class Magic_BLACKGUARD(Enum):
+    class BLACKGUARD(Enum):
 
         BLACKGUARD_ABSORB_HEALTH = 'SPCL102'
         BLACKGUARD_ANIMATE_DEAD = 'SPCL106'
         AURA_OF_DESPAIR = 'SPCL103'
 
-    class Magic_RANGER(Enum):
+    class RANGER(Enum):
 
         RANGER_CHARM_ANIMAL = 'SPCL311'
         RANGER_TRACKING = 'SPCL922'
 
-    class Magic_BERSERKER(Enum):
+    class BERSERKER(Enum):
 
         BERSERKER_ENRAGE = 'SPCL321'
         BERSERKER_RAGE = 'SPCL321'
 
-    class Magic_ARCHER(Enum):
+    class ARCHER(Enum):
 
         ARCHER_PROTECTION = 'SPIN898'
         ARCHER_CALL_SHOT = 'SPCL121'
 
-    class Magic_WIZARD(Enum):
+    class WIZARD(Enum):
 
         #WIZARD_CHAOS_VISUALS_ONLY = 'SPWI050'
         #WIZARD_DISPEL_MAGIC_VISUALS_ONLY = 'SPWI051'
@@ -290,20 +290,20 @@ class Spells:
         #WIZARD_SUMMON_PLANATAR_EVIL = 'SPWI924'
         #WIZARD_COMET = 'SPWI925'
 
-    class Magic_BARBARIAN(Enum):
+    class BARBARIAN(Enum):
 
         BARBARIAN_RAGE = 'SPCL152'
 
-    class Magic_ASSASSIN(Enum):
+    class ASSASSIN(Enum):
 
         ASSASSIN_POISON = 'SPCL423'
 
-    class Magic_BLADE(Enum):
+    class BLADE(Enum):
 
         BLADE_OFFENSIVE_SPIN = 'SPCL521'
         BLADE_DEFENSIVE_SPIN = 'SPCL522'
 
-    class Magic_HELL(Enum):
+    class HELL(Enum):
 
         HELL_BUFFET = 'SPIN658'
         HELL_SELFISH_EVIL = 'SPIN747'
@@ -332,21 +332,21 @@ class Spells:
         HELL_FEAR = 'SPIN772'
         HELL_HOUND_FLAME = 'SPIN956'
 
-    class Magic_CAVALIER(Enum):
+    class CAVALIER(Enum):
 
         CAVALIER_REMOVE_FEAR = 'SPCL222'
 
-    class Magic_WILD(Enum):
+    class WILD(Enum):
 
         WILD_MAGIC_AREA = 'SPIN645'
         WILD_MAGIC_ZONE = 'SPIN778'
 
-    class Magic_LATHANDER(Enum):
+    class LATHANDER(Enum):
 
         LATHANDER_BOON = 'SPCL741'
         LATHANDER_HOLD_UNDEAD = 'SPCL742'
 
-    class Magic_WARRIOR(Enum):
+    class WARRIOR(Enum):
 
         WARRIOR_WHIRLWIND = 'SPCL900'
         WARRIOR_GREATER_WHIRLWIND = 'SPCL901'
@@ -359,7 +359,7 @@ class Spells:
         WARRIOR_WAR_CRY = 'SPCL908'
         WARRIOR_SMITE = 'SPCL909'
 
-    class Magic_GAIN(Enum):
+    class GAIN(Enum):
 
         GAIN_ONE_CHA_PERMANENT = 'SPIN554'
         GAIN_ONE_WIS_PERMANENT = 'SPIN555'
@@ -372,7 +372,7 @@ class Spells:
         GAIN_ONE_CON_PERMANENT = 'SPIN590'
         GAIN_ONE_STR_PERMANENT = 'SPIN591'
 
-    class Magic_DRUID(Enum):
+    class DRUID(Enum):
 
         DRUID_HUMAN_FORM = 'SPIN123'
         DRUID_SHAPESHIFT_FROM_BLACKBEAR = 'SPIN123'
@@ -382,17 +382,17 @@ class Spells:
         DRUID_IMMUNE_POISON = 'SPCL924'
         DRUID_RESISTS = 'SPCL925'
 
-    class Magic_EVIL(Enum):
+    class EVIL(Enum):
 
         EVIL_LAYONHANDS = 'SPIN773'
 
-    class Magic_SHADOWDANCER(Enum):
+    class SHADOWDANCER(Enum):
 
         SHADOWDANCER_SHADOW_TWIN = 'SPCL936'
         SHADOWDANCER_SHADOW_MAZE = 'SPCL937'
         SHADOWDANCER_SHADOW_FORM = 'SPCL938'
 
-    class Magic_INNATE(Enum):
+    class INNATE(Enum):
 
         INNATE_CURE_LIGHT_WOUNDS = 'SPIN101'
         INNATE_SLOW_POISON = 'SPIN102'
@@ -401,7 +401,7 @@ class Spells:
         INNATE_HORROR = 'SPIN105'
         INNATE_VAMPIRIC_TOUCH = 'SPIN106'
 
-    class Magic_DM(Enum):
+    class DM(Enum):
 
         DM_SHIELD = 'SPIN650'
         DM_SEE_INVISIBLE = 'SPIN651'
@@ -410,20 +410,20 @@ class Spells:
         DM_FIRE_PROTECTION = 'SPIN654'
         DM_IMPROVED_HASTE = 'SPIN655'
 
-    class Magic_MONK(Enum):
+    class MONK(Enum):
 
         MONK_STUNNING_BLOW = 'SPCL811'
         MONK_LAY_ON_HANDS = 'SPCL815'
         MONK_QUIVERING_PALM = 'SPCL820'
 
-    class Magic_AVENGER(Enum):
+    class AVENGER(Enum):
 
         AVENGER_SHAPESHIFT_NATURAL_FORM = 'SPIN122'
         AVENGER_SHAPESHIFT_SWORDSPIDER = 'SPCL632'
         AVENGER_SHAPESHIFT_BABYWYVERN = 'SPCL633'
         AVENGER_SHAPESHIFT_FIRESALAMANDER = 'SPCL634'
 
-    class Magic_ROGUE(Enum):
+    class ROGUE(Enum):
 
         ROGUE_SET_SPIKE_TRAP = 'SPCL910'
         ROGUE_SET_EXPLODING_TRAP = 'SPCL911'
@@ -433,7 +433,7 @@ class Spells:
         ROGUE_ASSASINATION = 'SPCL916'
         ROGUE_AVOID_DEATH = 'SPCL917'
 
-    class Magic_BOOK(Enum):
+    class BOOK(Enum):
 
         BOOK_GOLEM = 'SPIN840'
         BOOK_BEHOLD = 'SPIN841'
@@ -442,22 +442,22 @@ class Spells:
         BOOK_SPIDER = 'SPIN844'
         BOOK_KOBOLD = 'SPIN845'
 
-    class Magic_INQUIS(Enum):
+    class INQUIS(Enum):
 
         INQUIS_DISPEL_MAGIC = 'SPCL231'
         INQUIS_TRUE_SIGHT = 'SPCL232'
 
-    class Magic_BEASTMASTER(Enum):
+    class BEASTMASTER(Enum):
 
         BEASTMASTER_FIND_FAMILIAR = 'SPCL342'
 
-    class Magic_POWERWORD(Enum):
+    class POWERWORD(Enum):
 
         POWERWORD_BLIND = 'SPWI958'
         POWERWORD_STUN = 'SPWI959'
         POWERWORD_KILL = 'SPWI960'
 
-    class Magic_CLERIC(Enum):
+    class CLERIC(Enum):
 
         CLERIC_BLESS = 'SPPR101'
         CLERIC_COMMAND = 'SPPR102'
@@ -597,11 +597,11 @@ class Spells:
         CLERIC_ETHER_GATE = 'SPPR750'
         CLERIC_ETHEREAL_RETRIBUTION = 'SPPR751'
 
-    class Magic_KENSAI(Enum):
+    class KENSAI(Enum):
 
         KENSAI_KIA = 'SPCL144'
 
-    class Magic_WISH(Enum):
+    class WISH(Enum):
 
         WISH_SPELL_FAILURE = 'SPIN731'
         WISH_LOSE_SPELL = 'SPIN732'
@@ -612,7 +612,7 @@ class Spells:
         WISH_MEMORIZE = 'SPIN737'
         WISH_PLANE = 'SPIN738'
 
-    class Magic_TRAP(Enum):
+    class TRAP(Enum):
 
         TRAP_DIRE_CHARM = 'SPPR982'
         TRAP_CONFUSION = 'SPPR983'
@@ -653,19 +653,178 @@ class Spells:
         TRAP_SLIME = 'SPIN708'
         TRAP_SPEAR = 'SPIN709'
 
-    class Magic_TALOS(Enum):
+    class TALOS(Enum):
 
         TALOS_STORMSHIELD = 'SPCL721'
         TALOS_LIGHTNING_BOLT = 'SPCL722'
 
-    class Magic_SUN(Enum):
+    class SUN(Enum):
 
         SUN_SOUL_SUN_SOULRAY = 'SPCL236'
         SUN_SOUL_GREATER_SUN = 'SPCL237'
         SUN_SOUL_SUN_SOULBEAM = 'SPCL239'
 
-    class Magic_HELM(Enum):
+    class HELM(Enum):
 
         HELM_RITUAL_SCROLL = 'SPIN592'
         HELM_SEEKING_SWORD = 'SPCL731'
         HELM_TRUE_SIGHT = 'SPCL732'
+        
+        
+CLERIC100 = [(Spells.CLERIC.CLERIC_CURE_LIGHT_WOUNDS, 30),
+             (Spells.CLERIC.CLERIC_COMMAND, 30),
+             (Spells.CLERIC.CLERIC_DETECT_EVIL, 5),
+             (Spells.CLERIC.CLERIC_PROTECT_FROM_EVIL, 20),
+             (Spells.CLERIC.CLERIC_DETECT_EVIL, 5),
+             (Spells.CLERIC.CLERIC_REMOVE_FEAR, 5),
+             (Spells.CLERIC.CLERIC_SANCTUARY, 5),
+             
+             (Spells.CLERIC.CLERIC_CHARM_PERSON, 30),
+             (Spells.CLERIC.CLERIC_HOLD_PERSON, 40),
+             (Spells.CLERIC.CLERIC_KNOW_ALIGNMENT, 5),
+             (Spells.CLERIC.CLERIC_SLOW_POISON, 5),
+             (Spells.CLERIC.CLERIC_SILENCE_15_FOOT, 10),
+             (Spells.CLERIC.CLERIC_CHANT, 5),
+             (Spells.CLERIC.CLERIC_WRITHING_FOG, 5),
+             
+             (Spells.CLERIC.CLERIC_ANIMATE_DEAD, 10),
+             (Spells.CLERIC.CLERIC_CURE_DISEASE, 5),
+             (Spells.CLERIC.CLERIC_DISPEL_MAGIC, 10),
+             (Spells.CLERIC.CLERIC_INVISIBILITY_PURGE, 10),
+             (Spells.CLERIC.CLERIC_REMOVE_CURSE, 5),
+             (Spells.CLERIC.CLERIC_REMOVE_PARALYSIS, 5),
+             (Spells.CLERIC.CLERIC_SPIRITUAL_CLARITY, 5),
+             (Spells.CLERIC.CLERIC_RIGID_THINKING, 40),
+             (Spells.CLERIC.CLERIC_SUMMON_INSECTS, 5),
+             (Spells.CLERIC.CLERIC_ZONE_OF_SWEET_AIR, 5),
+             
+             (Spells.CLERIC.CLERIC_DEATH_WARD, 5),
+             (Spells.CLERIC.CLERIC_DEFENSIVE_HARMONY, 5),
+             (Spells.CLERIC.CLERIC_FAR_SIGHT, 5),
+             (Spells.CLERIC.CLERIC_LESSER_RESTORATION, 5),
+             (Spells.CLERIC.CLERIC_MENTAL_DOMINATION, 40),
+             (Spells.CLERIC.CLERIC_NEGATIVE_PLANE_PROTECTION, 5),
+             (Spells.CLERIC.CLERIC_NEUTRALIZE_POISON, 10),
+             (Spells.CLERIC.CLERIC_PROTECTION_FROM_EVIL_10_FOOT, 20),
+             (Spells.CLERIC.CLERIC_SPIRIT_FIRE, 5),
+            
+             (Spells.CLERIC.CLERIC_GREATER_COMMAND, 50),
+             (Spells.CLERIC.CLERIC_INSECT_PLAGUE, 10),
+             (Spells.CLERIC.CLERIC_MAGIC_RESISTANCE, 10),
+             (Spells.CLERIC.CLERIC_RAISE_DEAD, 5),
+             (Spells.CLERIC.CLERIC_RECALL_SPIRIT, 5),
+             (Spells.CLERIC.CLERIC_CHAOTIC_COMMANDS, 10),
+             (Spells.CLERIC.CLERIC_TRUE_SIGHT, 10),
+
+             (Spells.CLERIC.CLERIC_BLADE_BARRIER, 10),
+             (Spells.CLERIC.CLERIC_BOLT_OF_GLORY, 10),
+             (Spells.CLERIC.CLERIC_CONJURE_FIRE_ELEMENTAL, 20),
+             (Spells.CLERIC.CLERIC_DOLOROUS_DECAY, 10),
+             (Spells.CLERIC.CLERIC_FALSE_DAWN, 10),
+             (Spells.CLERIC.CLERIC_HEAL, 20),
+             (Spells.CLERIC.CLERIC_PHYSICAL_MIRROR, 10),
+             (Spells.CLERIC.CLERIC_SPIRITUAL_LOCK, 10),
+             
+             (Spells.CLERIC.CLERIC_CONFUSION, 20),
+             (Spells.CLERIC.CLERIC_CREEPING_DOOM, 5),
+             (Spells.CLERIC.CLERIC_EARTHQUAKE, 5),
+             (Spells.CLERIC.CLERIC_ETHER_GATE, 5),
+             (Spells.CLERIC.CLERIC_ETHEREAL_RETRIBUTION, 5),
+             (Spells.CLERIC.CLERIC_FINGER_OF_DEATH, 10),
+             (Spells.CLERIC.CLERIC_GATE, 5),
+             (Spells.CLERIC.CLERIC_RESTORATION, 10),
+             (Spells.CLERIC.CLERIC_NATURE_BEAUTY, 5),
+             (Spells.CLERIC.CLERIC_RESURRECTION, 5),
+             (Spells.CLERIC.CLERIC_SYMBOL_DEATH, 5),
+             (Spells.CLERIC.CLERIC_SYMBOL_FEAR, 5),
+             (Spells.CLERIC.CLERIC_SYMBOL_STUN, 5),
+             (Spells.CLERIC.CLERIC_SUNRAY, 5),
+             (Spells.CLERIC.CLERIC_FIRE_STORM, 5)]
+
+WIZARD100 = [(Spells.WIZARD.WIZARD_ALARM, 20),
+             (Spells.WIZARD.WIZARD_MAGIC_MISSILE, 50),
+             (Spells.WIZARD.WIZARD_SLEEP, 10),
+             (Spells.WIZARD.WIZARD_GREASE, 10),
+             (Spells.WIZARD.WIZARD_BLINDNESS, 10),
+             (Spells.WIZARD.WIZARD_CHROMATIC_ORB, 100),
+            
+             (Spells.WIZARD.WIZARD_CHAOS_SHIELD, 10),
+             (Spells.WIZARD.WIZARD_DETECT_INVISIBILITY, 10),
+             (Spells.WIZARD.WIZARD_POWER_WORD_SLEEP, 30),
+             (Spells.WIZARD.WIZARD_RESIST_FEAR, 10),
+             (Spells.WIZARD.WIZARD_STINKING_CLOUD, 10),
+             (Spells.WIZARD.WIZARD_WEB, 10),
+             (Spells.WIZARD.WIZARD_HORROR, 20),
+            
+             (Spells.WIZARD.WIZARD_HOLD_PERSON, 30),
+             (Spells.WIZARD.WIZARD_DIRE_CHARM, 30),
+             (Spells.WIZARD.WIZARD_DISPEL_MAGIC, 20),
+             (Spells.WIZARD.WIZARD_FIREBALL, 10),
+             (Spells.WIZARD.WIZARD_HOLD_UNDEAD, 10),
+            
+             (Spells.WIZARD.WIZARD_CONFUSION, 40),
+             (Spells.WIZARD.WIZARD_IMPROVED_INVISIBILITY, 10),
+             (Spells.WIZARD.WIZARD_MINOR_GLOBE_OF_INVULNERABILITY, 10),
+             (Spells.WIZARD.WIZARD_REMOVE_CURSE, 5),
+             (Spells.WIZARD.WIZARD_EYE, 5),
+             (Spells.WIZARD.WIZARD_EMOTION_HOPELESSNESS, 10),
+             (Spells.WIZARD.WIZARD_ICE_STORM, 10),
+             (Spells.WIZARD.WIZARD_GREATER_MALISON, 10),
+            
+             (Spells.WIZARD.WIZARD_SPELL_IMMUNITY, 20),
+             (Spells.WIZARD.WIZARD_LOWER_RESISTANCE, 10),
+             (Spells.WIZARD.WIZARD_DOMINATION, 20),
+             (Spells.WIZARD.WIZARD_BREACH, 10),
+             (Spells.WIZARD.WIZARD_CLOUDKILL, 10),
+             (Spells.WIZARD.WIZARD_HOLD_MONSTER, 20),
+             (Spells.WIZARD.WIZARD_CHAOS, 10),
+            
+             (Spells.WIZARD.WIZARD_STONE_TO_FLESH, 5),
+             (Spells.WIZARD.WIZARD_SPELL_DEFLECTION, 5),
+             (Spells.WIZARD.WIZARD_PIERCE_MAGIC, 10),
+             (Spells.WIZARD.WIZARD_MISLEAD, 30),
+             (Spells.WIZARD.WIZARD_FLESH_TO_STONE, 10),
+             (Spells.WIZARD.WIZARD_CONTINGENCY, 5),
+             (Spells.WIZARD.WIZARD_IMPROVED_HASTE, 5),
+             (Spells.WIZARD.WIZARD_DISINTEGRATE, 10),
+             (Spells.WIZARD.WIZARD_DEATH_FOG, 5),
+             (Spells.WIZARD.WIZARD_DEATH_SPELL, 5),
+             (Spells.WIZARD.WIZARD_POWER_WORD_SILENCE, 5),
+             (Spells.WIZARD.WIZARD_GLOBE_OF_INVULNERABILITY, 5),
+             
+             (Spells.WIZARD.WIZARD_CONTROL_UNDEAD, 10),
+             (Spells.WIZARD.WIZARD_IMPROVED_CHAOS_SHIELD, 10),
+             (Spells.WIZARD.WIZARD_FINGER_OF_DEATH, 10),
+             (Spells.WIZARD.WIZARD_MASS_INVISIBILITY, 10),
+             (Spells.WIZARD.WIZARD_POWER_WORD_STUN, 10),
+             (Spells.WIZARD.WIZARD_PRISMATIC_SPRAY, 10),
+             (Spells.WIZARD.WIZARD_RUBY_RAY_OF_REVERSAL, 5),
+             (Spells.WIZARD.WIZARD_SPELL_TURNING, 5),
+             (Spells.WIZARD.WIZARD_SPHERE_OF_CHAOS, 30),
+             
+             (Spells.WIZARD.WIZARD_SIMULACRUM, 30),
+             (Spells.WIZARD.WIZARD_SYMBOL_STUN, 5),
+             (Spells.WIZARD.WIZARD_SYMBOL_FEAR, 5),
+             (Spells.WIZARD.WIZARD_SYMBOL_DEATH, 5),
+             (Spells.WIZARD.WIZARD_POWER_WORD_BLIND, 5),
+             (Spells.WIZARD.WIZARD_MAZE, 10),
+             (Spells.WIZARD.WIZARD_PIERCE_SHIELD, 10),
+             (Spells.WIZARD.WIZARD_ABI_DALZIMS_HORRID_WILTING, 10),
+             (Spells.WIZARD.WIZARD_BIGBYS_CLENCHED_FIST, 5),
+             (Spells.WIZARD.WIZARD_INCENDIARY_CLOUD, 5),
+             (Spells.WIZARD.WIZARD_SPELL_TRIGGER, 5),
+             (Spells.WIZARD.WIZARD_SUMMON_FIEND, 5),
+             
+             (Spells.WIZARD.WIZARD_ABSOLUTE_IMMUNITY, 10),
+             (Spells.WIZARD.WIZARD_BIGBYS_CRUSHING_HAND, 5),
+             (Spells.WIZARD.WIZARD_CHAIN_CONTINGENCY, 5),
+             (Spells.WIZARD.WIZARD_ENERGY_DRAIN, 5),
+             (Spells.WIZARD.WIZARD_FREEDOM, 10),
+             (Spells.WIZARD.WIZARD_GATE, 5),
+             (Spells.WIZARD.WIZARD_IMPRISONMENT, 10),
+             (Spells.WIZARD.WIZARD_METEOR_SWARM, 5),
+             (Spells.WIZARD.WIZARD_POWER_WORD_KILL, 10),
+             (Spells.WIZARD.WIZARD_TIME_STOP, 10),
+             (Spells.WIZARD.WIZARD_WISH, 10),
+             (Spells.WIZARD.WIZARD_WAIL_OF_THE_BANSHEE, 10),
+             (Spells.WIZARD.WIZARD_SPELL_TRAP, 5)]
