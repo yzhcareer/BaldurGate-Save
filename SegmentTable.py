@@ -25,6 +25,7 @@ class BaseTable(BaseOps, Enum):
         self.order = params[3] if _len > 3 else 'little'
         self.table = params[4] if _len > 4 else None
         self.optimum = params[5] if _len > 5 else None
+        self.optimum2 = params[6] if _len > 6 else self.optimum
         
     def getBytes(self, buffer, mismatch=0):
         return buffer[mismatch + self.position:
@@ -65,7 +66,11 @@ class BaseTable(BaseOps, Enum):
         
     def optimize(self, buffer, mismatch=0):
         if self.optimum is not None:
-            self.setValue(buffer, self.optimum, mismatch) 
+            self.setValue(buffer, self.optimum, mismatch)
+
+    def optimize2(self, buffer, mismatch=0):
+        if self.optimum2 is not None:
+            self.setValue(buffer, self.optimum2, mismatch)
             
             
 class Segments(BaseTable):
@@ -150,7 +155,7 @@ class Segments(BaseTable):
     MoraleRecovery = (0x0242, 2, False, 'little', None, 0)
     Kit = (0x0244, 4, False, 'little', 'Kit', None)
     ScriptOverride = (0x0248, 8, False, 'little', 'Script', None)
-    ScriptClass = (0x0250, 8, False, 'little', 'Script', 20619443365495874)
+    ScriptClass = (0x0250, 8, False, 'little', 'Script', 20619443365495874, None)
     ScriptRace = (0x0258, 8, False, 'little', 'Script', None)
     ScriptGeneral = (0x0260, 8, False, 'little', 'Script', None)
     ScriptDefault = (0x0268, 8, False, 'little', 'Script', None)
