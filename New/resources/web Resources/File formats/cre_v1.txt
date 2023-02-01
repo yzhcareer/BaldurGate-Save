@@ -1,0 +1,3612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <!--  <meta charset="utf-8"> -->
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   CRE file format
+  </title>
+  <meta content="The IESDP (Infinity Engine Structures Description Project) is an effort to research the workings of the Bioware Infinity Engine(R), and act as a collective resource for those interested in such workings.
+" name="description"/>
+  <link href="../../css/main.css" rel="stylesheet"/>
+  <!--
+  <link rel="canonical" href="https://gibberlings3.github.io/iesdp/file_formats/ie_formats/cre_v1.htm">
+  <link rel="alternate" type="application/rss+xml" title="IESDP" href="https://gibberlings3.github.io/iesdp/feed.xml">
+-->
+ </head>
+ <body>
+  <header class="site-header">
+   <hr/>
+   <div id="buttonboxtop">
+    <div id="buttonstriptop">
+     <a href="../../index.htm">
+      Index
+     </a>
+     •
+     <a href="../../files/2da/index.htm">
+      2DA
+     </a>
+     •
+     <a href="../../opcodes/index.htm">
+      Effects
+     </a>
+     •
+     <a href="../../file_formats/index.htm">
+      File Formats
+     </a>
+     •
+     <a href="../../scripting/actions/index.htm">
+      Actions
+     </a>
+     •
+     <a href="../../files/ids/index.htm">
+      Identifiers
+     </a>
+     •
+     <a href="../../scripting/triggers/index.htm">
+      Triggers
+     </a>
+     •
+     <a href="../../appendices/index.htm">
+      Appendices
+     </a>
+     •
+     <a href="../../site_info/index.htm">
+      Site Info
+     </a>
+     •
+     <a href="../../site_info/legal.htm">
+      Legal
+     </a>
+     •
+     <a href="https://www.gibberlings3.net/forums/forum/54-iesdp-updates-and-info/" target="_blank">
+      Forum
+     </a>
+    </div>
+   </div>
+   <hr/>
+   <div id="logo">
+    <a href="../../main.htm">
+     <img alt="IESDP Logo" height="120" src="../../images/iesdp_logo.gif" width="120"/>
+    </a>
+   </div>
+  </header>
+  <div id="nonFooter">
+   <div id="content">
+    <div class="title_main">
+     CRE file format
+    </div>
+    <br/>
+    <div class="fileHeader">
+     Applies to:
+    </div>
+    <div class="indent1">
+     BG1, BG1: TotS, BG2, BG2: ToB, BGEE, PST:EE
+    </div>
+    <br/>
+    <div class="fileHeader">
+     General Description
+    </div>
+    <div class="indent1">
+     This file format describes a "creature". Creatures can move, have an animation, hold items, run scripts, cast spells and initiate dialog. Creatures have several stats (some visible through the game UI) which are generally mapped to IDS or 2DA files.
+     <br/>
+    </div>
+    <br/>
+    <div class="fileHeader">
+     Detailed Description
+    </div>
+    <div class="indent1">
+     Overall Structure
+     <br/>
+     <ul>
+      <li>
+       <a href="#CREV1_0_Header">
+        Header
+       </a>
+      </li>
+      <li>
+       <a href="#CREV1_0_KnownSpell">
+        Known spells section
+       </a>
+      </li>
+      <li>
+       <a href="#CREV1_0_MemSpellInfo">
+        Spell memorization info
+       </a>
+      </li>
+      <li>
+       <a href="#CREV1_0_MemSpell">
+        Memorized spells section
+       </a>
+      </li>
+      <li>
+       <a href="#CREV1_0_Effects">
+        Effects
+       </a>
+      </li>
+      <li>
+       <a href="#CREV1_0_Item">
+        Items section
+       </a>
+      </li>
+      <li>
+       <a href="#CREV1_0_ItemSlots">
+        "Item slots"
+       </a>
+      </li>
+     </ul>
+    </div>
+    <br/>
+    <div class="fileHeader">
+     <a name="CREV1_0_Header">
+      CRE V1.0 Header
+     </a>
+    </div>
+    <div class="indent1">
+     <br/>
+     <table border="1" width="98%">
+      <colgroup>
+       <col width="5%"/>
+       <col width="12%"/>
+       <col width="*"/>
+      </colgroup>
+      <thead>
+       <tr>
+        <th>
+         Offset
+        </th>
+        <th>
+         Size (datatype)
+        </th>
+        <th>
+         Description
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         0x00000
+        </td>
+        <td>
+         4 (char array)
+        </td>
+        <td>
+         Signature ('CRE ')
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0004
+        </td>
+        <td>
+         4 (char array)
+        </td>
+        <td>
+         Version ('V1.0')
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0008
+        </td>
+        <td>
+         4 (strref)
+        </td>
+        <td>
+         Long name
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x000c
+        </td>
+        <td>
+         4 (strref)
+        </td>
+        <td>
+         Short name (tooltip)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0010
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         Creature flags
+         <ul>
+          <li>
+           <span class="unknown">
+            bit 0 Show longname in tooltip
+           </span>
+          </li>
+          <li>
+           bit 1: No corpse
+          </li>
+          <li>
+           bit 2: Keep corpse
+          </li>
+          <li>
+           bit 3: Original class was Fighter
+          </li>
+          <li>
+           bit 4: Original class was Mage
+          </li>
+          <li>
+           bit 5: Original class was Cleric
+          </li>
+          <li>
+           bit 6: Original class was Thief
+          </li>
+          <li>
+           bit 7: Original class was Druid
+          </li>
+          <li>
+           bit 8: Original class was Ranger
+          </li>
+          <li>
+           bit 9: Fallen Paladin
+          </li>
+          <li>
+           bit 10: Fallen Ranger
+          </li>
+          <li>
+           bit 11: Exportable
+          </li>
+          <li>
+           <span class="unknown">
+            bit 12: Hide injury status in tooltip
+           </span>
+          </li>
+          <li>
+           bit 13: Quest critical / affected by alternative damage
+          </li>
+          <li>
+           bit 14 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_Flags_BIT14">
+             Moving between areas
+            </a>
+           </b>
+           <ul>
+            <li>
+             See
+             <a href="../../opcodes/bgee.htm#op186">
+              opcode #186
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           bit 15: Been in Party
+          </li>
+          <li>
+           <span class="unknown">
+            bit 16: Restore item in hand
+           </span>
+          </li>
+          <li>
+           <span class="unknown">
+            bit 17: Un-sets bit 16
+           </span>
+          </li>
+          <li>
+           <span class="unknown">
+            bit 18 - 19 Unused
+           </span>
+          </li>
+          <li>
+           bit 20: Prevent exploding death (BGEE)
+          </li>
+          <li>
+           <span class="unknown">
+            bit 21: Unused
+           </span>
+          </li>
+          <li>
+           bit 22: Don't apply nightmare mode modifiers (BGEE)
+          </li>
+          <li>
+           bit 23: No tooltip (BGEE)
+          </li>
+          <li>
+           <span class="unknown">
+            bit 24: Related to random walk (ea)
+           </span>
+          </li>
+          <li>
+           <span class="unknown">
+            bit 25: Related to random walk (general)
+           </span>
+          </li>
+          <li>
+           <span class="unknown">
+            bit 26: Related to random walk (race)
+           </span>
+          </li>
+          <li>
+           <span class="unknown">
+            bit 27: Related to random walk (class)
+           </span>
+          </li>
+          <li>
+           <span class="unknown">
+            bit 28: Related to random walk (specific)
+           </span>
+          </li>
+          <li>
+           <span class="unknown">
+            bit 29: Related to random walk (gender)
+           </span>
+          </li>
+          <li>
+           <span class="unknown">
+            bit 30: Related to random walk (alignment)
+           </span>
+          </li>
+          <li>
+           <span class="unknown">
+            bit 31: Un-interruptable (memory only)
+           </span>
+          </li>
+         </ul>
+         A multiclass char is indicated by the absence of any of the "original class" flags being set.
+         <br/>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0014
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         XP (gained for killing this creature)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0018
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x18">
+           Creature Power Level
+          </a>
+         </b>
+         (for summoning spells) / XP of the creature (for party members)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x001c
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         Gold carried
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0020
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x20">
+           Permanent status flags
+          </a>
+         </b>
+         (
+         <a href="../../files/ids/bgee/state.htm">
+          STATE.IDS
+         </a>
+         )
+         <ul>
+          <li>
+           bit 0 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT0">
+             SLEEPING
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 1 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT1">
+             BERSERK
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 2 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT2">
+             PANIC
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 3 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT3">
+             STUNNED
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 4 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT4">
+             INVISIBLE
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 5 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT5">
+             HELPLESS
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 6 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT6">
+             FROZEN_DEATH
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 7 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT7">
+             STONE_DEATH
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 8 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT8">
+             EXPLODING_DEATH
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 9 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT9">
+             FLAME_DEATH
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 10 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT10">
+             ACID_DEATH
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 11 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT11">
+             DEAD
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 12 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT12">
+             SILENCED
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 13 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT13">
+             CHARMED
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 14 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT14">
+             POISONED
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 15 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT15">
+             HASTED
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 16 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT16">
+             SLOWED
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 17 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT17">
+             INFRAVISION
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 18 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT18">
+             BLIND
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 19 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT19">
+             DISEASED
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 20 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT20">
+             FEEBLEMINDED
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 21 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT21">
+             NONDETECTION
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 22 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT22">
+             IMPROVEDINVISIBILITY
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 23 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT23">
+             BLESS
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 24 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT24">
+             CHANT
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 25 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT25">
+             DRAWUPONHOLYMIGHT
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 26 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT26">
+             LUCK
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 27 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT27">
+             AID
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 28 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT28">
+             CHANTBAD
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 29 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT29">
+             BLUR
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 30 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT30">
+             MIRRORIMAGE
+            </a>
+           </b>
+          </li>
+          <li>
+           bit 31 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x20_BIT31">
+             CONFUSED
+            </a>
+           </b>
+          </li>
+         </ul>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0024
+        </td>
+        <td>
+         2 (word)
+        </td>
+        <td>
+         Current Hit Points
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0026
+        </td>
+        <td>
+         2 (word)
+        </td>
+        <td>
+         Maximum Hit Points
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0028
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x28">
+           Animation ID
+          </a>
+         </b>
+         <ul>
+          <li>
+           BGEE:
+           <ul>
+            <li>
+             Animation slots have been (for the most parts) externalised. Symbolic names are defined in
+             <code>
+              <a href="../../files/ids/bgee/animate.htm">
+               ANIMATE.IDS
+              </a>
+             </code>
+             . Animation definitions can be found in
+             <a href="ini_anim.htm">
+              PST-style INI files
+             </a>
+             where filenames are made up from the hexadecimal representation of the slot value and the
+             <code>
+              ".INI"
+             </code>
+             extension. Example: Animation of
+             <code>
+              "0x6004 CLERIC_MALE_GNOME"
+             </code>
+             is defined in
+             <code>
+              6004.INI
+             </code>
+             .
+            </li>
+           </ul>
+          </li>
+          <li>
+           Other games:
+           <ul>
+            <li>
+             There is some structure to the ordering of these entries, however, it is mostly hard-coded into the .exe, and uneditable.
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x002c
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Metal Colour Index
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x002d
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Minor Colour Index
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x002e
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x2E">
+           Major Colour Index
+          </a>
+         </b>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x002f
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Skin Colour Index
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0030
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Leather Colour Index
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0031
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Armor Colour Index
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0032
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Hair Colour Index
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0033
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x33">
+           Eff structure version
+          </a>
+         </b>
+         <ul>
+          <li>
+           0 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x33_0">
+             Version 1 EFF
+            </a>
+           </b>
+          </li>
+          <li>
+           1 &amp;longrightarrow;
+           <b>
+            <a name="CREV1_0_Header_0x33_1">
+             Version 2 EFF
+            </a>
+           </b>
+          </li>
+         </ul>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0034
+        </td>
+        <td>
+         8 (resref)
+        </td>
+        <td>
+         Small Portrait (BMP)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x003c
+        </td>
+        <td>
+         8 (resref)
+        </td>
+        <td>
+         Large Portrait (PSTEE: BAM, Other games: BMP)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0044
+        </td>
+        <td>
+         1 (signed byte)
+        </td>
+        <td>
+         Reputation (minimum value: 0)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0045
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Hide In Shadows (base)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0046
+        </td>
+        <td>
+         2 (signed word)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x46">
+           Armor Class (Natural)
+          </a>
+         </b>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0048
+        </td>
+        <td>
+         2 (signed word)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x48">
+           Armor Class (Effective)
+          </a>
+         </b>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x004a
+        </td>
+        <td>
+         2 (signed word)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x4A">
+           Armor Class (Crushing Attacks Modifier)
+          </a>
+         </b>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x004c
+        </td>
+        <td>
+         2 (signed word)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x4C">
+           Armor Class (Missile Attacks Modifier)
+          </a>
+         </b>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x004e
+        </td>
+        <td>
+         2 (signed word)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x4E">
+           Armor Class (Piercing Attacks Modifier)
+          </a>
+         </b>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0050
+        </td>
+        <td>
+         2 (signed word)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x50">
+           Armor Class (Slashing Attacks Modifier)
+          </a>
+         </b>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0052
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         THAC0 (1-25)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0053
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x53">
+           Number of attacks
+          </a>
+         </b>
+         (0-10)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0054
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Save versus death (0-20)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0055
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Save versus wands (0-20)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0056
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Save versus polymorph (0-20)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0057
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Save versus breath attacks (0-20)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0058
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Save versus spells (0-20)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0059
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Resist fire (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x005a
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Resist cold (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x005b
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Resist electricity (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x005c
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Resist acid (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x005d
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Resist magic (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x005e
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Resist magic fire (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x005f
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Resist magic cold (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0060
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Resist slashing (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0061
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Resist crushing (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0062
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Resist piercing (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0063
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Resist missile (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0064
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x64">
+           Detect illusion
+          </a>
+         </b>
+         (minimum value : 0)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0065
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x65">
+           Set traps
+          </a>
+         </b>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0066
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Lore (0-100)*
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0067
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x67">
+           Lockpicking
+          </a>
+         </b>
+         (minimum value: 0)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0068
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x68">
+           Move Silently
+          </a>
+         </b>
+         (minimum value: 0)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0069
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x69">
+           Find/disarm traps
+          </a>
+         </b>
+         (minimum value: 0)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x006a
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x6A">
+           Pick Pockets
+          </a>
+         </b>
+         (minimum value: 0)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x006b
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Fatigue (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x006c
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Intoxication (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x006d
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Luck
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x006e
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1: Large swords proficiency
+         <br/>
+         Other games: Unused proficiency
+         <br/>
+         Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x006f
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1: Small swords proficiency
+         <br/>
+         BG2: Unused proficiency
+         <br/>
+         Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0070
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1: Bows proficiency
+         <br/>
+         BG2: Unused proficiency
+         <br/>
+         Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0071
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1: Spears proficiency
+         <br/>
+         BG2: Unused proficiency
+         <br/>
+         Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0072
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1: Blunt proficiency
+         <br/>
+         BG2: Unused proficiency
+         <br/>
+         Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0073
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1: Spiked proficiency
+         <br/>
+         BG2: Unused proficiency
+         <br/>
+         Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0074
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1: Axe proficiency
+         <br/>
+         BG2: Unused proficiency
+         <br/>
+         Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0075
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1: Missile proficiency
+         <br/>
+         BG2: Unused proficiency
+         <br/>
+         Note: Proficiencies are packed into 3-bit chunks for primary and secondary classes.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0076
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0077
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0078
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0079
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x007a
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x007b
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)
+         <br/>
+         PSTEE: Unspent proficiencies
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x007c
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)
+         <br/>
+         PSTEE: Number of available inventory slots (0 indicates default number)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x007d
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)
+         <br/>
+         BGEE: Nightmare mode modifiers applied
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x007e
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)
+         <br/>
+         BGEE: Translucency (range: 0-255)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x007f
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)
+         <br/>
+         BGEE: Reputation gain/loss when killed
+         <br/>
+         PSTEE: MURDER variable increment value
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0080
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)
+         <br/>
+         BGEE: Reputation gain/loss when joining party
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0081
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         BG1, BG2: Unused proficiency (Proficiencies are packed into 3-bit chunks for primary and secondary classes)
+         <br/>
+         BGEE: Reputation gain/loss when leaving party
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0082
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Turn undead level
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0083
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Tracking skill (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td colspan="3">
+         <b>
+          The following entry applies to BG1, BG2 and BGEE:
+         </b>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0084
+        </td>
+        <td>
+         32 (char array)
+        </td>
+        <td>
+         Tracking target
+        </td>
+       </tr>
+       <tr>
+        <td colspan="3">
+         <b>
+          The following entries apply only to PSTEE:
+         </b>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0084
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         Current thief class experience
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0088
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         Current mage class experience
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x008c
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         GOOD variable increment value
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x008d
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         LAW variable increment value
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x008e
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         LADY variable increment value
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x008f
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Faction (see
+         <a href="../../files/ids/pst/faction.htm">
+          FACTION.IDS
+         </a>
+         )
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0090
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Team (see
+         <a href="../../files/ids/pst/team.htm">
+          TEAM.IDS
+         </a>
+         )
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0091
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Species (see
+         <a href="../../files/ids/pst/race.htm">
+          RACE.IDS
+         </a>
+         )
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0092
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Dialogue activation range
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0093
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Selection circle size
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0094
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Shield flags:
+         <ul>
+          <li>
+           Bit 0: Normal shield
+          </li>
+          <li>
+           Bit 1: Black barbed shield
+          </li>
+         </ul>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0095
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <span class="unknown">
+          Field of vision
+         </span>
+         (bitfield?)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0096
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         Attribute flags:
+         <ul>
+          <li>
+           Bit 0: Auto-calculate marker rectangle
+          </li>
+          <li>
+           Bit 1: Translucent
+          </li>
+          <li>
+           Bit 2:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 3:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 4: Increment death variable counter (deathvariable_DEAD)
+          </li>
+          <li>
+           Bit 5: Increment character type death counter
+          </li>
+          <li>
+           Bit 6: Character type death counter modifier
+          </li>
+          <li>
+           Bit 7: Increment faction death counter (KILL_faction)
+          </li>
+          <li>
+           Bit 8: Increment team death counter (KILL_team)
+          </li>
+          <li>
+           Bit 9: Invulnerable
+          </li>
+          <li>
+           Bit 10: Increment GOOD variable
+          </li>
+          <li>
+           Bit 11: Increment LAW variable
+          </li>
+          <li>
+           Bit 12: Increment LADY variable
+          </li>
+          <li>
+           Bit 13: Increment MURDER variable
+          </li>
+          <li>
+           Bit 14: Do not face target during dialogue
+          </li>
+          <li>
+           Bit 15: Turn all nearby creatures party-hostile when calling Help()
+          </li>
+          <li>
+           Bit 16:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 17:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 18:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 19:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 20:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 21:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 22:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 23:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 24:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 25:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 26:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 27:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 28:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 29:
+           <span class="unknown">
+            Unknown
+           </span>
+          </li>
+          <li>
+           Bit 30: Do not increment globals (used in save games to prevent duplicate counting)
+          </li>
+          <li>
+           Bit 31: Area supplemental
+          </li>
+         </ul>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x009a
+        </td>
+        <td>
+         10 (bytes)
+        </td>
+        <td>
+         Unused
+        </td>
+       </tr>
+       <tr>
+        <td colspan="3">
+         <b>
+          Continued for all games:
+         </b>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x00a4
+        </td>
+        <td>
+         4*100 (Strref*100)
+        </td>
+        <td>
+         Strrefs pertaining to the character.
+         <br/>
+         Most are connected with the sound-set (see
+         <a href="../../files/ids/bg1/soundoff.htm">
+          SOUNDOFF.IDS
+         </a>
+         (BG1) and
+         <a href="../../files/ids/bg2/sndslot.htm">
+          SNDSLOT.IDS
+         </a>
+         for (BG2)).
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0234
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x234">
+           Level first class
+          </a>
+         </b>
+         <ul>
+          <li>
+           Highest attained level in class (0-100).
+          </li>
+          <li>
+           For dual/multi class characters, the levels for each class are split between
+           <code>
+            <a href="#CREV1_0_Header_0x234">
+             0x0234
+            </a>
+           </code>
+           ,
+           <code>
+            <a href="#CREV1_0_Header_0x235">
+             0x0235
+            </a>
+           </code>
+           and
+           <code>
+            <a href="#CREV1_0_Header_0x236">
+             0x0236
+            </a>
+           </code>
+           according to the internal class name, i.e. for a
+           <code>
+            FIGHTER_THIEF
+           </code>
+           <code>
+            <a href="#CREV1_0_Header_0x234">
+             0x0234
+            </a>
+           </code>
+           will hold the fighter level,
+           <code>
+            <a href="#CREV1_0_Header_0x235">
+             0x0235
+            </a>
+           </code>
+           will hold the thief level and
+           <code>
+            <a href="#CREV1_0_Header_0x236">
+             0x0236
+            </a>
+           </code>
+           will be
+           <code>
+            0
+           </code>
+           .
+          </li>
+         </ul>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0235
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x235">
+           Level second class
+          </a>
+         </b>
+         <ul>
+          <li>
+           Highest attained level in class (0-100)
+          </li>
+         </ul>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0236
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x236">
+           Level third class
+          </a>
+         </b>
+         <ul>
+          <li>
+           Highest attained level in class (0-100)
+          </li>
+         </ul>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0237
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Sex (from gender.ids) - checkable via the sex stat
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0238
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x238">
+           Strength
+          </a>
+         </b>
+         (1-25)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0239
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x239">
+           Strength &amp;percnt; Bonus
+          </a>
+         </b>
+         (0-100)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x023a
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x23A">
+           Intelligence
+          </a>
+         </b>
+         (1-25)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x023b
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x23B">
+           Wisdom
+          </a>
+         </b>
+         (1-25)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x023c
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x23C">
+           Dexterity
+          </a>
+         </b>
+         (1-25)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x023d
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x23D">
+           Constitution
+          </a>
+         </b>
+         (1-25)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x023e
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x23E">
+           Charisma
+          </a>
+         </b>
+         (1-25)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x023f
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Morale
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0240
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Morale break
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0241
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Racial enemy (
+         <a href="../../files/ids/bg2/race.htm">
+          RACE.IDS
+         </a>
+         )
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0242
+        </td>
+        <td>
+         2 (word)
+        </td>
+        <td>
+         Morale Recovery Time
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0244
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x244">
+           Kit information
+          </a>
+         </b>
+         :
+         <br/>
+         <pre>
+NONE                0x00000000
+KIT_BARBARIAN       0x00004000
+KIT_TRUECLASS       0x40000000
+KIT_BERSERKER       0x40010000
+KIT_WIZARDSLAYER    0x40020000
+KIT_KENSAI          0x40030000
+KIT_CAVALIER        0x40040000
+KIT_INQUISITOR      0x40050000
+KIT_UNDEADHUNTER    0x40060000
+KIT_ARCHER          0x40070000
+KIT_STALKER         0x40080000
+KIT_BEASTMASTER     0x40090000
+KIT_ASSASSIN        0x400A0000
+KIT_BOUNTYHUNTER    0x400B0000
+KIT_SWASHBUCKLER    0x400C0000
+KIT_BLADE           0x400D0000
+KIT_JESTER          0x400E0000
+KIT_SKALD           0x400F0000
+KIT_TOTEMIC         0x40100000
+KIT_SHAPESHIFTER    0x40110000
+KIT_AVENGER         0x40120000
+KIT_GODTALOS        0x40130000
+KIT_GODHELM         0x40140000
+KIT_GODLATHANDER    0x40150000
+ABJURER             0x00400000
+CONJURER            0x00800000
+DIVINER             0x01000000
+ENCHANTER           0x02000000
+ILLUSIONIST         0x04000000
+INVOKER             0x08000000
+NECROMANCER         0x10000000
+TRANSMUTER          0x20000000</pre>
+         <br/>
+         NB.: The values of this offset are written in big endian style.
+         <br/>
+         NB.: In BG1 the valid values are mages schools and None
+         <br/>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0248
+        </td>
+        <td>
+         8 (resref)
+        </td>
+        <td>
+         Creature
+         <a href="bcs.htm">
+          script
+         </a>
+         - Override
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0250
+        </td>
+        <td>
+         8 (resref)
+        </td>
+        <td>
+         Creature
+         <a href="bcs.htm">
+          script
+         </a>
+         - Class
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0258
+        </td>
+        <td>
+         8 (resref)
+        </td>
+        <td>
+         Creature
+         <a href="bcs.htm">
+          script
+         </a>
+         - Race
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0260
+        </td>
+        <td>
+         8 (resref)
+        </td>
+        <td>
+         Creature
+         <a href="bcs.htm">
+          script
+         </a>
+         - General
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0268
+        </td>
+        <td>
+         8 (resref)
+        </td>
+        <td>
+         Creature
+         <a href="bcs.htm">
+          script
+         </a>
+         - Default
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0270
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Enemy-Ally (
+         <a href="../../files/ids/bg2/ea.htm">
+          EA.IDS
+         </a>
+         )
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0271
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         General (
+         <a href="../../files/ids/bg2/general.htm">
+          GENERAL.IDS
+         </a>
+         )
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0272
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Race (
+         <a href="../../files/ids/bg2/race.htm">
+          RACE.IDS
+         </a>
+         )
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0273
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Class (
+         <a href="../../files/ids/bg2/class.htm">
+          CLASS.IDS
+         </a>
+         )
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0274
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x274">
+           Specific
+          </a>
+         </b>
+         (
+         <a href="../../files/ids/bg2/specific.htm">
+          SPECIFIC.IDS
+         </a>
+         )
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0275
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Gender (
+         <a href="../../files/ids/bg2/gender.htm">
+          GENDER.IDS
+         </a>
+         ). Dictates the casting voice, and checked for the summoning cap.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0276
+        </td>
+        <td>
+         5 (bytes)
+        </td>
+        <td>
+         <a href="../../files/ids/bg2/object.htm">
+          OBJECT.IDS
+         </a>
+         references
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x027b
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         Alignment (
+         <a href="../../files/ids/bg2/alignmen.htm">
+          ALIGNMEN.IDS
+         </a>
+         )
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x027c
+        </td>
+        <td>
+         2 (word)
+        </td>
+        <td>
+         Global actor enumeration value
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x027e
+        </td>
+        <td>
+         2 (word)
+        </td>
+        <td>
+         Local (area) actor enumeration value
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0280
+        </td>
+        <td>
+         32 (char array)
+        </td>
+        <td>
+         <b>
+          <a name="CREV1_0_Header_0x280">
+           Death Variable
+          </a>
+         </b>
+         (set SPRITE_IS_DEADvariable on death)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x02a0
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         <a href="#CREV1_0_KnownSpell">
+          Known spells
+         </a>
+         offset
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x02a4
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         <a href="#CREV1_0_KnownSpell">
+          Known spells
+         </a>
+         count
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x02a8
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         <a href="#CREV1_0_MemSpellInfo">
+          Spell memorization info
+         </a>
+         offset
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x02ac
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         <a href="#CREV1_0_MemSpellInfo">
+          Spell memorization info
+         </a>
+         entries count
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x02b0
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         <a href="#CREV1_0_MemSpell">
+          Memorized spells
+         </a>
+         offset
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x02b4
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         <a href="#CREV1_0_MemSpell">
+          Memorized spells
+         </a>
+         count
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x02b8
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         Offset to
+         <a href="#CREV1_0_ItemSlots">
+          Item slots
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x02bc
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         Offset to
+         <a href="#CREV1_0_Item">
+          Items
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x02c0
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         Count of
+         <a href="#CREV1_0_Item">
+          Items
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x02c4
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         Offset to
+         <a href="#CREV1_0_Effects">
+          effects
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x02c8
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         Count of
+         <a href="#CREV1_0_Effects">
+          effects
+         </a>
+         .
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x02cc
+        </td>
+        <td>
+         8 (resref)
+        </td>
+        <td>
+         <a href="dlg_v1.htm">
+          Dialog file
+         </a>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <br/>
+    NB. Lore is calculated as
+    <code>
+     ((level * rate) + int_bonus + wis_bonus)
+    </code>
+    . Intelligence and wisdom bonuses are from
+    <a href="../../files/2da/2da_bgee/lorebon.htm">
+     LOREBON.2DA
+    </a>
+    and the rate is the lookup value in
+    <a href="../../files/2da/2da_bgee/lore.htm">
+     LORE.2DA
+    </a>
+    , based on class. For multiclass characters,
+    <code>
+     (level * rate)
+    </code>
+    is calculated for both classes separately and the higher of the two values is used - they are not cumulative.
+    <br/>
+    <br/>
+    <div class="fileHeader">
+     <a name="CREV1_0_KnownSpell">
+      CRE V1.0 Known Spells
+     </a>
+    </div>
+    <div class="indent1">
+     <br/>
+     This section details which spells the creature knows, and it consists of an array of entries formatted as follows.
+     <br/>
+     <br/>
+     <table border="1" width="98%">
+      <colgroup>
+       <col width="5%"/>
+       <col width="12%"/>
+       <col width="*"/>
+      </colgroup>
+      <thead>
+       <tr>
+        <th>
+         Offset
+        </th>
+        <th>
+         Size (data type)
+        </th>
+        <th>
+         Description
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         0x0000
+        </td>
+        <td>
+         8 (resref)
+        </td>
+        <td>
+         Resource name of the
+         <a href="SPL_V1.htm">
+          SPL file
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0008
+        </td>
+        <td>
+         2 (word)
+        </td>
+        <td>
+         Spell Level -1
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x000a
+        </td>
+        <td>
+         2 (word)
+        </td>
+        <td>
+         Spell type
+         <ul>
+          <li>
+           0=Priest
+          </li>
+          <li>
+           1=Wizard
+          </li>
+          <li>
+           2=Innate
+          </li>
+         </ul>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <br/>
+    <div class="fileHeader">
+     <a name="CREV1_0_MemSpellInfo">
+      CRE V1.0 Spell Memorization Info
+     </a>
+    </div>
+    <div class="indent1">
+     <br/>
+     This section details how many spells the creature can memorize, and how many it has memorized. It consists of an array of entries formatted as follows.
+     <br/>
+     <br/>
+     <table border="1" width="98%">
+      <colgroup>
+       <col width="5%"/>
+       <col width="12%"/>
+       <col width="*"/>
+      </colgroup>
+      <thead>
+       <tr>
+        <th>
+         Offset
+        </th>
+        <th>
+         Size (data type)
+        </th>
+        <th>
+         Description
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         0x0000
+        </td>
+        <td>
+         2 (word)
+        </td>
+        <td>
+         Spell level (less 1)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0002
+        </td>
+        <td>
+         2 (word)
+        </td>
+        <td>
+         Number of spells memorizable
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0004
+        </td>
+        <td>
+         2 (word)
+        </td>
+        <td>
+         Number of spells memorizable (after effects)
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0006
+        </td>
+        <td>
+         2 (word)
+        </td>
+        <td>
+         Spell type
+         <ul>
+          <li>
+           0=Priest
+          </li>
+          <li>
+           1=Wizard
+          </li>
+          <li>
+           2=Innate
+          </li>
+         </ul>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0008
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         Index into
+         <a href="#CREV1_0_MemSpell">
+          memorized spells
+         </a>
+         array of first memorized spell of this type in this level.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x000c
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         Count of memorized spell entries in
+         <a href="#CREV1_0_MemSpell">
+          memorized spells
+         </a>
+         array of memorized spells of this type in this level.
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <br/>
+    <div class="fileHeader">
+     <a name="CREV1_0_MemSpell">
+      CRE V1.0 Memorized Spells Table
+     </a>
+    </div>
+    <div class="indent1">
+     <br/>
+     This section details which spells the character has memorized. It consists of an array of entries formatted as follows.
+     <br/>
+     <br/>
+     <table border="1" width="98%">
+      <colgroup>
+       <col width="5%"/>
+       <col width="12%"/>
+       <col width="*"/>
+      </colgroup>
+      <thead>
+       <tr>
+        <th>
+         Offset
+        </th>
+        <th>
+         Size (data type)
+        </th>
+        <th>
+         Description
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         0x0000
+        </td>
+        <td>
+         8 (resref)
+        </td>
+        <td>
+         Resource name of the
+         <a href="SPL_V1.htm">
+          SPL file
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0008
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         Memorised
+         <ul>
+          <li>
+           bit 0 Memorised
+          </li>
+          <li>
+           bit 1 Disabled
+          </li>
+         </ul>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <br/>
+    <div class="fileHeader">
+     <a name="CREV1_0_Effects">
+      CRE V1.0 Effects
+     </a>
+    </div>
+    <div class="indent1">
+     <br/>
+     Unlike ordinary
+     <a href="../ie_formats/eff_v2.htm">
+      V2 EFF
+     </a>
+     files,
+     <code>
+      <a href="#CREV1_0_Header_0x33_1">
+       CRE effect V2
+      </a>
+     </code>
+     structures omit the 8-byte
+     <code>
+      EFF V2
+     </code>
+     header.
+     <br/>
+     As a result, their total length is
+     <code>
+      108h
+     </code>
+     instead of
+     <code>
+      110h
+     </code>
+     and all attributes (
+     <code>
+      Target
+     </code>
+     ,
+     <code>
+      Power
+     </code>
+     ,
+     <code>
+      Parameter1
+     </code>
+     , etc...) are located at the value listed there "minus 8" (e.g.
+     <code>
+      Opcode number
+     </code>
+     is at
+     <code>
+      0x8
+     </code>
+     instead of
+     <code>
+      0x10
+     </code>
+     ).
+     <br/>
+     <br/>
+    </div>
+    <br/>
+    <div class="fileHeader">
+     <a name="CREV1_0_Item">
+      CRE V1.0 Items Table
+     </a>
+    </div>
+    <div class="indent1">
+     <br/>
+     This section details which items the character has. It consists of an array of entries formatted as follows:
+     <br/>
+     <br/>
+     <table border="1" width="98%">
+      <colgroup>
+       <col width="5%"/>
+       <col width="12%"/>
+       <col width="*"/>
+      </colgroup>
+      <thead>
+       <tr>
+        <th>
+         Offset
+        </th>
+        <th>
+         Size (data type)
+        </th>
+        <th>
+         Description
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         0x0000
+        </td>
+        <td>
+         8 (resref)
+        </td>
+        <td>
+         Resource name of the
+         <a href="ITM_V1.htm">
+          ITM file
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0008
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <span class="unknown">
+          Item expiration time - item creation hour (replace with drained item)
+         </span>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0009
+        </td>
+        <td>
+         1 (byte)
+        </td>
+        <td>
+         <span class="unknown">
+          Item expiration time - (elapsed hour count divided by 256, rounded down) + 1 (replace with drained item)
+          <br/>
+          When the game hour and elapsed hour count for the current game time exceed these values, the item is removed.
+         </span>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x000a
+        </td>
+        <td>
+         2 (word)
+        </td>
+        <td>
+         Quantity/Charges 1
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x000c
+        </td>
+        <td>
+         2 (word)
+        </td>
+        <td>
+         Quantity/Charges 2
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x000e
+        </td>
+        <td>
+         2 (word)
+        </td>
+        <td>
+         Quantity/Charges 3
+        </td>
+       </tr>
+       <tr>
+        <td>
+         0x0010
+        </td>
+        <td>
+         4 (dword)
+        </td>
+        <td>
+         Flags
+         <ul>
+          <li>
+           bit 0: Identified
+          </li>
+          <li>
+           bit 1: Unstealable
+          </li>
+          <li>
+           bit 2: Stolen
+          </li>
+          <li>
+           bit 3:
+           <b>
+            <a name="CREV1_0_Item_0x10_BIT3">
+             Undroppable
+            </a>
+           </b>
+          </li>
+         </ul>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <br/>
+    <div class="fileHeader">
+     <a name="CREV1_0_ItemSlots">
+      CRE V1.0 Item Slots
+     </a>
+    </div>
+    <div class="indent1">
+     <br/>
+     This is an array of words keeping track of which items are located in each particular location in the CRE's inventory. Each entry will be either -1 (0xFFFF - "empty") or an index into the
+     <a href="#CREV1_0_Item">
+      Items table
+     </a>
+     . Selected weapon is a word value indicating which weapon slot is currently selected. Values are from slots.ids - 35, with 1000 meaning "fist".
+     <br/>
+     <br/>
+     BG1, BG2, BGEE:
+     <br/>
+     There are 40 slots, and they are not the same as the order specified in specified in
+     <a href="../../files/ids/bg2/slots.htm">
+      SLOTS.IDS
+     </a>
+     . The actual order is:
+     <ul>
+      <li>
+       Helmet
+      </li>
+      <li>
+       Armor
+      </li>
+      <li>
+       Shield
+      </li>
+      <li>
+       Gloves
+      </li>
+      <li>
+       L.Ring
+      </li>
+      <li>
+       R.Ring
+      </li>
+      <li>
+       Amulet
+      </li>
+      <li>
+       Belt
+      </li>
+      <li>
+       Boots
+      </li>
+      <li>
+       Weapon 1
+      </li>
+      <li>
+       Weapon 2
+      </li>
+      <li>
+       Weapon 3
+      </li>
+      <li>
+       Weapon 4
+      </li>
+      <li>
+       Quiver 1
+      </li>
+      <li>
+       Quiver 2
+      </li>
+      <li>
+       Quiver 3
+      </li>
+      <li>
+       Quiver 4 (cannot be accesed from GUI)
+      </li>
+      <li>
+       Cloak
+      </li>
+      <li>
+       Quick item 1
+      </li>
+      <li>
+       Quick item 2
+      </li>
+      <li>
+       Quick item 3
+      </li>
+      <li>
+       Inventory item (1 to 16)
+      </li>
+      <li>
+       Magic weapon
+      </li>
+      <li>
+       Selected weapon
+      </li>
+      <li>
+       Selected weapon ability
+      </li>
+     </ul>
+     <br/>
+     PSTEE:
+     <br/>
+     Non-party characters have 40 item slots by default if field at offset 0x007c is set to 0. Slot configuration is defined in
+     <a href="../../files/2da/2da_bgee/itmslots.htm">
+      ITMSLOTS.2DA
+     </a>
+     . The default order is:
+     <ul>
+      <li>
+       Left Earring/Lens/Helmet
+      </li>
+      <li>
+       Chest
+      </li>
+      <li>
+       Right Tattoo (lower)
+      </li>
+      <li>
+       Hand
+      </li>
+      <li>
+       Right Ring
+      </li>
+      <li>
+       Left Ring
+      </li>
+      <li>
+       Right Earring/Eyeball
+      </li>
+      <li>
+       Left Tattoo
+      </li>
+      <li>
+       Wrist
+      </li>
+      <li>
+       Weapon 1
+      </li>
+      <li>
+       Weapon 2
+      </li>
+      <li>
+       Weapon 3
+      </li>
+      <li>
+       Weapon 4
+      </li>
+      <li>
+       Quiver 1
+      </li>
+      <li>
+       Quiver 2
+      </li>
+      <li>
+       Quiver 3
+      </li>
+      <li>
+       Quiver 4
+      </li>
+      <li>
+       Right Tattoo (upper)
+      </li>
+      <li>
+       Quick item 1
+      </li>
+      <li>
+       Quick item 2
+      </li>
+      <li>
+       Quick item 3
+      </li>
+      <li>
+       Inventory item (1 to 16)
+      </li>
+      <li>
+       Magic weapon
+      </li>
+      <li>
+       Selected weapon
+      </li>
+      <li>
+       Selected weapon ability
+      </li>
+     </ul>
+     Party members have 57 item slots by default. Actual slot number (excluding "Selected weapon ability") is defined at offset 0x007c. Slot configuration can be modified in
+     <a href="../../files/2da/2da_bgee/itmslots.htm">
+      ITMSLOTS.2DA
+     </a>
+     . The default order is:
+     <ul>
+      <li>
+       Left Earring/Lens/Helmet
+      </li>
+      <li>
+       Chest
+      </li>
+      <li>
+       Right Tattoo (lower)
+      </li>
+      <li>
+       Hand
+      </li>
+      <li>
+       Right Ring
+      </li>
+      <li>
+       Left Ring
+      </li>
+      <li>
+       Right Earring/Eyeball
+      </li>
+      <li>
+       Left Tattoo
+      </li>
+      <li>
+       Wrist
+      </li>
+      <li>
+       Weapon 1
+      </li>
+      <li>
+       Weapon 2
+      </li>
+      <li>
+       Weapon 3
+      </li>
+      <li>
+       Weapon 4
+      </li>
+      <li>
+       Quiver 1
+      </li>
+      <li>
+       Quiver 2
+      </li>
+      <li>
+       Quiver 3
+      </li>
+      <li>
+       Quiver 4
+      </li>
+      <li>
+       Right Tattoo (upper)
+      </li>
+      <li>
+       Quick item 1
+      </li>
+      <li>
+       Quick item 2
+      </li>
+      <li>
+       Quick item 3
+      </li>
+      <li>
+       Inventory item (1 to 16)
+      </li>
+      <li>
+       Magic weapon
+      </li>
+      <li>
+       Quiver 5
+      </li>
+      <li>
+       <span class="unknown">
+        Unused
+       </span>
+      </li>
+      <li>
+       Quick item 4
+      </li>
+      <li>
+       Quick item 5
+      </li>
+      <li>
+       Inventory item (17 to 20)
+      </li>
+      <li>
+       <span class="unknown">
+        Unused
+       </span>
+      </li>
+      <li>
+       <span class="unknown">
+        Unused
+       </span>
+      </li>
+      <li>
+       <span class="unknown">
+        Unused
+       </span>
+      </li>
+      <li>
+       <span class="unknown">
+        Unused
+       </span>
+      </li>
+      <li>
+       <span class="unknown">
+        Unused
+       </span>
+      </li>
+      <li>
+       <span class="unknown">
+        Unused
+       </span>
+      </li>
+      <li>
+       <span class="unknown">
+        Unused
+       </span>
+      </li>
+      <li>
+       <span class="unknown">
+        Unused
+       </span>
+      </li>
+      <li>
+       <span class="unknown">
+        Unused
+       </span>
+      </li>
+      <li>
+       Selected weapon
+      </li>
+      <li>
+       Selected weapon ability
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <a class="go-up" href="#">
+  </a>
+  <script>
+   window.addEventListener("scroll", function(event) {
+  var top = window.pageYOffset || document.documentElement.scrollTop;
+  var arrow = document.getElementsByClassName("go-up")[0];
+  if (top > 100) {
+    arrow.style.visibility = "visible";
+  } else {
+    arrow.style.visibility = "hidden";
+  }
+});
+  </script>
+  <footer class="site-footer">
+   <hr/>
+   <div id="footer">
+    <div class="">
+     <a class="gh-icon-container" href="https://github.com/gibberlings3/iesdp/">
+      <span class="icon icon--github">
+       <svg viewbox="0 0 16 16">
+        <path d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z">
+        </path>
+       </svg>
+      </span>
+     </a>
+     <a href="https://github.com/gibberlings3/iesdp//blob/master/file_formats/ie_formats/cre_v1.htm">
+      Edit this page
+     </a>
+    </div>
+    <div class="">
+     <form action="http://www.google.com/search" method="get">
+      <div style="margin: 0px; padding: 0px; text-align: center">
+       <input name="ie" type="hidden" value="UTF-8"/>
+       <input name="oe" type="hidden" value="UTF-8"/>
+       <input class="form_text" maxlength="255" name="q" size="30" type="text" value=""/>
+       <input class="form_button" name="btnG" type="submit" value="Search"/>
+       <input name="domains" type="hidden" value="https://gibberlings3.github.io/iesdp"/>
+       <input name="sitesearch" type="hidden" value="https://gibberlings3.github.io/iesdp"/>
+      </div>
+     </form>
+    </div>
+   </div>
+   <hr/>
+  </footer>
+ </body>
+</html>
