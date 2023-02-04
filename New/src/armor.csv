@@ -1,0 +1,380 @@
+,Category,ItemCode,Item
+0,AMULET,AMUL01,Necklace of Missiles                          
+1,AMULET,AMUL02,Necklace                                      
+2,AMULET,AMUL04,Studded Necklace with Zios Gems               
+3,AMULET,AMUL06,Agni Mani Necklace                            
+4,AMULET,AMUL08,Tiger Cowrie Shell Necklace                   
+5,AMULET,AMUL09,Silver Necklace                               
+6,AMULET,AMUL10,Gold Necklace                                 
+7,AMULET,AMUL11,Pearl Necklace                                
+8,AMULET,AMUL13,Bloodstone Amulet                             
+9,AMULET,AMUL14,Amulet of Protection +1                       
+10,AMULET,AMUL15,Shield Amulet                                 
+11,AMULET,AMUL16,Amulet of Metaspell Influence                 
+12,AMULET,AMULBAR,Barrier Amulet                                
+13,AMULET,AMULBRA,Badge of the Brave                            
+14,AMULET,AMULBRO,Clasp of Bron's Cloak                         
+15,AMULET,AMULDEF,Scarab of Defense                             
+16,AMULET,AMULFLE,Amulet of Dark Flesh                          
+17,AMULET,ANTIWEB,
+18,AMULET,BDSLEEP,Necklace                                      
+19,AMULET,BEHAMU,
+20,AMULET,BONEAM,Bone Talisman                                 
+21,AMULET,BWTALIS,Black Wolf Talisman                           
+22,AMULET,CIFADE,
+23,AMULET,CISHELH,Kossuth's Blood                               
+24,AMULET,CORELLO,Symbol of Corellon Larethian                  
+25,AMULET,IMMAGMS,
+26,AMULET,IMMCLOUD,
+27,AMULET,IPSION,Greenstone Amulet                             
+28,AMULET,KOSSUTH,Kossuth's Blood                               
+29,AMULET,LABELAS,Symbol of Labelas Enoreth                     
+30,AMULET,MINHP1,
+31,AMULET,MINHPAM,
+32,AMULET,MINHPN9,
+33,AMULET,MIREKQI,Mirek's Family Heirloom                       
+34,AMULET,MIRROR2,Mirror of Black Ice Amulet                    
+35,AMULET,MONHP1,
+36,AMULET,MOONBOW,Symbol of Sehanine Moonbow                    
+37,AMULET,OHPOMILL,Detect Illusion                               
+38,AMULET,REGHP2R,
+39,AMULET,SCARAB,Scarab of Goodwill                            
+40,AMULET,SEEAMUL,
+41,AMULET,SHADE,
+42,AMULET,SHEVARA,Symbol of Shevarash                           
+43,AMULET,SOLONOR,Symbol of Solonor Thelandira                  
+44,AMULET,SUMAMU,
+45,AMULET,WEREAMUL,Sel
+46,ARMOR,ARMPEN,Armor of Penance +5                           
+47,ARMOR,BLCKPLA,Plate Mail Armor                              
+48,ARMOR,BLOOD,Bathed-In-Blood +4                            
+49,ARMOR,CDHARMOR,Yeti Hide Armor +1                            
+50,ARMOR,CDSCALE,White Dragon Scale                            
+51,ARMOR,CHAINBM,Baleful Mail +2                               
+52,ARMOR,CHAN01,Chain Mail                                    
+53,ARMOR,CHAN02,Chain Mail +1                                 
+54,ARMOR,CHAN03,Chain Mail +2                                 
+55,ARMOR,CHAN04,Splint Mail                                   
+56,ARMOR,CHAN05,Splint Mail +1                                
+57,ARMOR,CHAN99,Splint Mail                                   
+58,ARMOR,CISPGRD3,Plate Mail Armor                              
+59,ARMOR,CLCK09,Mage Robe of Cold Resistance                  
+60,ARMOR,CLCK10,Mage Robe of Fire Resistance                  
+61,ARMOR,CLCK11,Mage Robe of Electrical Resistance            
+62,ARMOR,CLCK12,Knave's Robe                                  
+63,ARMOR,CLCK13,Traveler's Robe                               
+64,ARMOR,CLCK14,Adventurer's Robe                             
+65,ARMOR,CLCK15,Robe of the Good Archmagi                     
+66,ARMOR,CLCK16,Robe of the Neutral Archmagi                  
+67,ARMOR,CLCK17,Robe of the Evil Archmagi                     
+68,ARMOR,CLCK18,Knave's Robe                                  
+69,ARMOR,DRAGARM,Black Dragon Scale                            
+70,ARMOR,ELFCHAN,Elven Chain Mail of the Hand +3               
+71,ARMOR,ELROBE,Robe of the Hand                              
+72,ARMOR,GLORY,The Glory of Suffering +6                     
+73,ARMOR,IPLAT05,Full Plate Mail +1                            
+74,ARMOR,ISWARM,Black Swan Armor +2                           
+75,ARMOR,KAYCHAI,Kaylessa's Armor +3                           
+76,ARMOR,KING,Winter King's Plate                           
+77,ARMOR,LEAT01,Leather Armor                                 
+78,ARMOR,LEAT02,Leather Armor +1                              
+79,ARMOR,LEAT03,Leather Armor +2                              
+80,ARMOR,LEAT04,Studded Leather Armor                         
+81,ARMOR,LEAT05,Studded Leather Armor +1                      
+82,ARMOR,LEAT06,Missile Attractor +2                          
+83,ARMOR,LEAT07,Studded Leather Armor +2                      
+84,ARMOR,LEAT10,Hide Armor                                    
+85,ARMOR,LEAT99,Leather Armor                                 
+86,ARMOR,MAILLIF,Mail of Life +3                               
+87,ARMOR,MOURNER,Mourner's Armor +4                            
+88,ARMOR,NAMJI,Namji's Robe                                  
+89,ARMOR,OGI,Ogi-Luc's Great Robe                          
+90,ARMOR,OGIEN,Ogien's Scale +4                              
+91,ARMOR,OHFULLP,Full Plate Mail                               
+92,ARMOR,PLAT01,Plate Mail Armor                              
+93,ARMOR,PLAT02,Plate Mail +1                                 
+94,ARMOR,PLAT04,Mithral Field Plate Armor +2                  
+95,ARMOR,PLAT05,Full Plate Mail +1                            
+96,ARMOR,PLAT19,Full Plate Mail +2                            
+97,ARMOR,PLAT97,Plate Mail Armor                              
+98,ARMOR,PLATBLK,Plate Mail Armor                              
+99,ARMOR,PLATND,Plate Mail Armor                              
+100,ARMOR,PRESROB,Necromancer's Robe                            
+101,ARMOR,ROBEANG,Robes of Agony                                
+102,ARMOR,ROBEARM,Robe of Armory                                
+103,ARMOR,ROBEINV,Robe of the Good Archmagi                     
+104,ARMOR,SHARK,Shark Skin Armor                              
+105,ARMOR,SHARK2,Shark Skin and Coral Armor                    
+106,ARMOR,SHARK3,Coral Plate Armor                             
+107,ARMOR,SHPLATE,Shadowed Plate +3                             
+108,ARMOR,SHROBE,Shadowed Robe                                 
+109,ARMOR,SWANARM,Black Swan Armor +2                           
+110,ARMOR,UMHULK,Umber Hulk Plate                              
+111,ARMOR,UROBE1A,Robe of Enfusing                              
+112,ARMOR,USLTR01,Shadowed Studded Leather +1                   
+113,ARMOR,USLTR2A,Reinforced Leather +1                         
+114,ARMOR,USLTR3A,Shadowed Studded Leather +2                   
+115,ARMOR,USLTR4A,Studded Leather of Resistance +3              
+116,ARMOR,USLTR5A,Shadowed Studded Leather +4                   
+117,ARMOR,VEXED,Vexed Armor                                   
+118,ARMOR,VEXED2,Vexed Armor                                   
+119,ARMOR,VEXED3,Vexed Armor                                   
+120,ARMOR,WATCHER,Robe of the Watcher                           
+121,ARMOR,XCHAN03,Chain Mail +2                                 
+122,ARMOR,XCLCK17,Robe of the Evil Archmagi                     
+123,ARMOR,XLEAT03,Leather Armor +2                              
+124,BELT,BELT01,Girdle                                        
+125,BELT,BELT02,Golden Girdle                                 
+126,BELT,BELT03,Girdle of Bluntness                           
+127,BELT,BELT04,Girdle of Piercing                            
+128,BELT,BELTBEA,Girdle of Beatification                       
+129,BELT,BELTBON,Belt of Bones                                 
+130,BELT,BELTGON,Girdle of Gond                                
+131,BELT,BELTSTO,Belt of Stones                                
+132,BELT,BELTSTR,Girdle of Stromnos                            
+133,BELT,BERSERK,Bone Marrow Belt                              
+134,BELT,CDGOND,Girdle of Gond                                
+135,BELT,CIBOSSB,Ring                                          
+136,BELT,LABELT,Girdle of Labelas                             
+137,BELT,OBLOOD,Girdle of Ogre Blood                          
+138,BELT,SASH,Shimmering Sash                               
+139,BELT,TROLLDIE,
+140,BOOT,BOOT01,Boots of Speed                                
+141,BOOT,BOOT02,Boots of Stealth                              
+142,BOOT,BOOT03,Boots of the North                            
+143,BOOT,BOOT04,Boots of Avoidance                            
+144,BOOT,BOOT05,Boots of Grounding                            
+145,BOOT,BOOTFOR,Boots of the Forgotten Ones                   
+146,BOOT,BOOTFOX,Boots of the Fox                              
+147,BOOT,BOOTMAN,Boots of the Many Paths                       
+148,BOOT,BOOTMOA,Boots of Moander                              
+149,BOOT,BOOTQUI,Quiet Boots                                   
+150,BOOT,CIBOOT,Boots of Speed                                
+151,BOOT,ELFBOOT,Elven Sewn Boots                              
+152,BOOT,SHBOOTS,Shadowed Boots                                
+153,BOOT,SQRLSPD,Boots of Speed                                
+154,BOOT,STOMPER,Stomper's Boots                               
+155,BOOT,TROLLBOO,The Paws of the Cheetah                       
+156,BRACER,BLAST,Bracers of Blasting                           
+157,BRACER,BRAC01,Bracers of Defense A.C. 8                     
+158,BRACER,BRAC02,Bracers of Defense A.C. 7                     
+159,BRACER,BRAC03,Bracers of Defense A.C. 6                     
+160,BRACER,BRAC04,Bracers of Archery                            
+161,BRACER,BRAC05,Bracers                                       
+162,BRACER,BRAC06,Gauntlets of Ogre Power                       
+163,BRACER,BRAC07,Gauntlets of Dexterity                        
+164,BRACER,BRAC09,Gauntlets of Weapon Skill                     
+165,BRACER,BRAC10,Gauntlets of Weapon Expertise                 
+166,BRACER,BRACEIP,Bracers of Icelandic Pearl                    
+167,BRACER,CIBOSST,
+168,BRACER,ELFGLOV,Elven Sewn Gloves                             
+169,BRACER,GAUNTEM,Gauntlets of Elven Might                      
+170,BRACER,GAUNTID,Gauntlets of Infernal Damnation               
+171,BRACER,GVALOR1,Gauntlet of Valor                             
+172,BRACER,KAYGLOV,Kaylessa's Gloves                             
+173,BRACER,KEDL,Silver Bracers of Kedl                        
+174,BRACER,OHBRAC01,The Flaming Fists of Lin Mei                  
+175,BRACER,OHBRAC02,Sarutobi's Stone Breakers                     
+176,BRACER,XBRAC07,Gauntlets of Dexterity                        
+177,CLOAK,CDWUFF,Cloak of the Winter Wolf                      
+178,CLOAK,CLCK01,Cloak of Protection +1                        
+179,CLOAK,CLCK02,Cloak of Protection +2                        
+180,CLOAK,CLCK03,Cloak of Displacement                         
+181,CLOAK,CLCK06,Cloak of Non-Detection                        
+182,CLOAK,CLCKBS,Cloak of Burdened Spirits                     
+183,CLOAK,CLOAKIN,Cloak of Invisibility                         
+184,CLOAK,CLOAKMI,Mithran's Cloak                               
+185,CLOAK,CLOAKSC,Cloak of Scintillating Colors                 
+186,CLOAK,ELFCLCK,Elven Sewn Cloak                              
+187,CLOAK,GLIMGLM,Glimglam's Cloak +1                           
+188,CLOAK,MANTLECS,Mantle of the Coming Storm                    
+189,CLOAK,MANTLEHF,Mantle of Hell's Furnace                      
+190,CLOAK,SHCLOAK,Shadowed Cloak                                
+191,CLOAK,VIRGIN,Wailing of Virgins                            
+192,HELM,CDRELM,Remorhaz Shell Helm                           
+193,HELM,CISPGRD1,Helmet of Charm Protection                    
+194,HELM,CONE,Cyclocone                                     
+195,HELM,HELM01,Helmet                                        
+196,HELM,HELM06,Helmet of Charm Protection                    
+197,HELM,HELM08,Helmet                                        
+198,HELM,HELM09,Helmet                                        
+199,HELM,HELM10,Helmet                                        
+200,HELM,HELMBLK,Helmet                                        
+201,HELM,HELMCT,Chautog's Thinker                             
+202,HELM,HELMDED,Dead Man's Face                               
+203,HELM,HELMDEF,Helm of the Trusted Defender                  
+204,HELM,HELMHUN,Illian's Hunting Helm                         
+205,HELM,HELMLA,Blessed Helm of Lathander                     
+206,HELM,HELMPAT,Patriot Helm                                  
+207,HELM,HELMSH,Helm of Shouting                              
+208,HELM,HELMSKWA,Helmet                                        
+209,HELM,HELMSUN,Sune's Laurel of Favor                        
+210,HELM,IHELM10,Helmet                                        
+211,HELM,OHIOUN01,Deep Red Ioun Stone                           
+212,HELM,OHIOUN02,Scarlet
+213,HELM,OHIOUN03,Clear Ioun Stone                              
+214,HELM,ROGUE,Rogue's Cowl                                  
+215,RING,ANTIMAG,
+216,RING,APORT,
+217,RING,BDCONSTR,Construct immunity item - do not translate    
+218,RING,BELT12,Holy Symbol of Lathander                      
+219,RING,BELT13,Holy Symbol of Helm                           
+220,RING,BELT14,Holy Symbol of Talos                          
+221,RING,BRING,
+222,RING,CIGBARD,Ring of Free Action                           
+223,RING,CIRAKSH1,Ring of Invisibility                          
+224,RING,CISTONE,
+225,RING,CSALRING,
+226,RING,DBONE,Ring of Dwarven Bone                          
+227,RING,EIDANRNG,Eidan's Legacy Ring                           
+228,RING,ELEMPRIN,
+229,RING,FAMMY,Sandthief's Ring                              
+230,RING,FARTRNG,
+231,RING,FREEACT,Ring of Free Action                           
+232,RING,FSALRING,
+233,RING,GHOST,
+234,RING,GOLSTONE,Ring                                          
+235,RING,GORGON,Ring of the Gorgon                            
+236,RING,ILLBLUR,
+237,RING,IMMUNE1,
+238,RING,IMMUNE2,
+239,RING,IMMUNE3,
+240,RING,INVULNER,
+241,RING,IRONGOL,
+242,RING,JASPER,Jasper's Ring of Shocking Grasp               
+243,RING,KAYRING,Kaylessa's Ring                               
+244,RING,LWRING,
+245,RING,MAGE01,Sandthief's Ring                              
+246,RING,MAGE06,
+247,RING,MDK2RING,Big Gun                                       
+248,RING,MIN1HP,
+249,RING,MIN2HP,
+250,RING,MOVE20,
+251,RING,MOVRAT10,
+252,RING,NOMAGIC,
+253,RING,OHHIDE,Hide In Shadows                               
+254,RING,REG1HP2,
+255,RING,REGEN,Ring of Aura Transfusion                      
+256,RING,REGHP1,
+257,RING,REGHP2,
+258,RING,RIDRING,
+259,RING,RING01,Ring                                          
+260,RING,RING02,Ring of Fire Resistance                       
+261,RING,RING03,Ring of Animal Friendship                     
+262,RING,RING06,Ring of Protection +1                         
+263,RING,RING07,Ring of Protection +2                         
+264,RING,RING08,Ring of Wizardry                              
+265,RING,RING09,Ring of Free Action                           
+266,RING,RING10,Gold Ring                                     
+267,RING,RING11,Silver Ring                                   
+268,RING,RING13,Jade Ring                                     
+269,RING,RING17,Flamedance Ring                               
+270,RING,RING18,Fire Opal Ring                                
+271,RING,RING21,Ring of Infravision                           
+272,RING,RING22,Ring of Holiness                              
+273,RING,RING90,Ring                                          
+274,RING,RING91,Ring                                          
+275,RING,RING95,Ring                                          
+276,RING,RING97,Ring                                          
+277,RING,RINGCOP,Copy of Marketh's Ring                        
+278,RING,RINGDEMN,
+279,RING,RINGED,Edion's Ring of Wizardry                      
+280,RING,RINGELF,The Elfbone Ring of Kiran-Hai                 
+281,RING,RINGFIR,Ring of Fire Resistance                       
+282,RING,RINGKON,Kontik's Ring of Wizardry                     
+283,RING,RINGLUR,Tarnished Ring                                
+284,RING,RINGMAL,
+285,RING,RINGPAN,Ring of Pain Amplification                    
+286,RING,RINGTOM,
+287,RING,RINGWOLF,
+288,RING,SEEALL,
+289,RING,SHADOWS,Ring of Shadows                               
+290,RING,SHLDRNG,Shield Ring                                   
+291,RING,SPRNGB01,Interesting. Well... we must be off. Farewell.
+292,RING,SPRNGB02,Interesting. Well... we must be off. Farewell.
+293,RING,SPRNGB03,Interesting. Well... we must be off. Farewell.
+294,RING,SPRNGB04,Interesting. Well... we must be off. Farewell.
+295,RING,SPRNGL01,Interesting. Well... we must be off. Farewell.
+296,RING,SPRNGL02,Interesting. Well... we must be off. Farewell.
+297,RING,SPRNGL03,Interesting. Well... we must be off. Farewell.
+298,RING,SPRNGL04,Interesting. Well... we must be off. Farewell.
+299,RING,SPRNGS01,Interesting. Well... we must be off. Farewell.
+300,RING,SPRNGS02,Interesting. Well... we must be off. Farewell.
+301,RING,SPRNGS03,Interesting. Well... we must be off. Farewell.
+302,RING,SPRNGS04,Interesting. Well... we must be off. Farewell.
+303,RING,SPRNGW01,Interesting. Well... we must be off. Farewell.
+304,RING,SPRNGW02,Interesting. Well... we must be off. Farewell.
+305,RING,SPRNGW03,Interesting. Well... we must be off. Farewell.
+306,RING,SPRNGW04,Interesting. Well... we must be off. Farewell.
+307,RING,SPRNGZ05,Interesting. Well... we must be off. Farewell.
+308,RING,SQRLREG,
+309,RING,SRING,Ring of Sanctuary                             
+310,RING,STALKER,Ring                                          
+311,RING,STUPID,Ring                                          
+312,RING,SUMAN,
+313,RING,SUMRING,
+314,RING,TRAN100,
+315,RING,TRANS,
+316,RING,TRANS2,
+317,RING,TRANS20,
+318,RING,TRANS3,
+319,RING,TRANS4,
+320,RING,TRANS40,
+321,RING,TRANS5,
+322,RING,TRANS60,
+323,RING,TROLLDE,
+324,RING,TROLLIMM,
+325,RING,TROLLREG,
+326,RING,ULRING,Ulcaster Academy Ring                         
+327,RING,URING1A,Ring of the Warrior                           
+328,RING,URING1B,Ring of Lesser Resistance                     
+329,RING,URING2A,Greater Ring of the Warrior                   
+330,RING,URING2B,Ring of Missile Deflection                    
+331,RING,URING3A,Ring of Resistance                            
+332,RING,URING3B,Ring of Strength                              
+333,RING,URING3C,Ring of Intelligence                          
+334,RING,URING4A,Ring of Reckless Action                       
+335,RING,URING4B,Ring of the Protector +2                      
+336,RING,URING4C,Ring of Aura Transfusion                      
+337,RING,URING5A,Ring of Greater Resistance                    
+338,RING,URING5B,Ring of the Warrior Thief                     
+339,RING,VAMPREG,
+340,RING,VAMPREG1,
+341,RING,WISP,Ring of the Will-o-Wisp                       
+342,RING,YXURESI,
+343,SHIELD,ARGENT,The Argent Shield +2                          
+344,SHIELD,BEETSHLD,Rhino Beetle Shield                           
+345,SHIELD,BLCKSHD,Large Shield +1                               
+346,SHIELD,CDMYST,Mystery of the Dead +3                        
+347,SHIELD,CDSTOUT,Stoutward +1                                  
+348,SHIELD,CISPGRD2,Small Shield                                  
+349,SHIELD,DNTSHD1,Sundered Shield of Tiernon +1                 
+350,SHIELD,DNTSHD2,Sundered Shield of Tiernon +2                 
+351,SHIELD,LYRE,Lyre of Progression                           
+352,SHIELD,MYSTERY,Mystery of the Dead +3                        
+353,SHIELD,NYMSHLD,Nym's Rhino Beetle Shield +2                  
+354,SHIELD,ORRSHLD,Orrick's Rhino Beetle Shield +3               
+355,SHIELD,REVENAN,The Shield of the Revenant +2                 
+356,SHIELD,SHLD01,Small Shield                                  
+357,SHIELD,SHLD02,Small Shield +1                               
+358,SHIELD,SHLD03,Medium Shield                                 
+359,SHIELD,SHLD04,Medium Shield +1                              
+360,SHIELD,SHLD05,Large Shield                                  
+361,SHIELD,SHLD06,Large Shield +1                               
+362,SHIELD,SHLD07,Large Shield +1
+363,SHIELD,SHLD08,Buckler                                       
+364,SHIELD,SHLD09,Buckler                                       
+365,SHIELD,SHLD10,Buckler                                       
+366,SHIELD,SHLD13,Medium Shield                                 
+367,SHIELD,SHLD15,Large Shield                                  
+368,SHIELD,SHLD18,Large Shield                                  
+369,SHIELD,SHLDBCH,The Bitch Queen's Envoy +2                    
+370,SHIELD,SHLDRED,The Red Knight's Shield +3                    
+371,SHIELD,SHSHLD,Shield of the Hand                            
+372,SHIELD,STOUT,Stoutward +1                                  
+373,SHIELD,USHLD2A,Reinforced Large Shield +1                    
+374,SHIELD,USHLD2B,Large Shield +1 of Missile Deflection         
+375,SHIELD,USHLD3A,Reinforced Large Shield +2                    
+376,SHIELD,USHLD3B,Great Shield +3                               
+377,SHIELD,USHLD4A,Large Shield of Strength +1                   
+378,SHIELD,WAUKEEN,Waukeen's Defender +2                         

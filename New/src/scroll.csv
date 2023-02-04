@@ -1,0 +1,261 @@
+,Category,ItemCode,Item
+0,SCROLL,SCRL03,Protection from Acid
+1,SCROLL,SCRL04,Protection from Cold
+2,SCROLL,SCRL05,Protection from Electricity
+3,SCROLL,SCRL06,Protection from Fire
+4,SCROLL,SCRL07,Protection from Magic
+5,SCROLL,SCRL08,Protection from Poison
+6,SCROLL,SCRL09,Protection from Undead
+7,SCROLL,SCRL10,Cursed Scroll of Weakness
+8,SCROLL,SCRL11,Cursed Scroll of Clumsiness
+9,SCROLL,SCRL12,Cursed Scroll of Foolishness
+10,SCROLL,SCRL13,Cursed Scroll of Ugliness
+11,SCROLL,SCRL15,Protection from Petrification
+12,SCROLL,SCRL16,Cursed Scroll of Petrification
+13,SCROLL,SCRL17,Cursed Scroll of Ailment
+14,SCROLL,SCRL18,Cursed Scroll of Stupidity
+15,SCROLL,SCRLJALA,Geas Removal Scroll
+16,SCROLL,SCRLPET,Stone to Flesh Scroll
+17,SCROLL,SCRLZZ,Summon Cow 
+18,SCROLL,SCRL5U,Reflected Image 
+19,SCROLL,SCRL66,Grease 
+20,SCROLL,SCRL67,Armor 
+21,SCROLL,SCRL68,Burning Hands 
+22,SCROLL,SCRL69,Charm Person 
+23,SCROLL,SCRL6D,Find Familiar 
+24,SCROLL,SCRL70,Color Spray 
+25,SCROLL,SCRL72,Friends 
+26,SCROLL,SCRL75,Identify 
+27,SCROLL,SCRL76,Infravision 
+28,SCROLL,SCRL77,Magic Missile 
+29,SCROLL,SCRL78,Protection From Evil 
+30,SCROLL,SCRL79,Shield 
+31,SCROLL,SCRL80,Shocking Grasp 
+32,SCROLL,SCRL81,Sleep 
+33,SCROLL,SCRL82,Chill Touch 
+34,SCROLL,SCRL83,Chromatic Orb 
+35,SCROLL,SCRL84,Larloch's Minor Drain 
+36,SCROLL,SCRL86,Detect Evil 
+37,SCROLL,SCRLA6,Spook 
+38,SCROLL,SCDECA,Decastave 
+39,SCROLL,SCRL1B,Agannazar's Scorcher 
+40,SCROLL,SCRL1C,Ghoul touch 
+41,SCROLL,SCRL3G,Vocalize 
+42,SCROLL,SCRL6E,Power Word
+43,SCROLL,SCRL6F,Ray of Enfeeblement 
+44,SCROLL,SCRL71,Blindness 
+45,SCROLL,SCRL73,Protection from Petrification 
+46,SCROLL,SCRL85,Blur 
+47,SCROLL,SCRL87,Detect Invisibility 
+48,SCROLL,SCRL89,Horror 
+49,SCROLL,SCRL90,Invisibility 
+50,SCROLL,SCRL91,Knock 
+51,SCROLL,SCRL92,Know Alignment 
+52,SCROLL,SCRL93,Luck 
+53,SCROLL,SCRL94,Resist Fear 
+54,SCROLL,SCRL95,Melf's Acid Arrow 
+55,SCROLL,SCRL96,Mirror Image 
+56,SCROLL,SCRL97,Stinking Cloud 
+57,SCROLL,SCRL98,Strength 
+58,SCROLL,SCRL99,Web 
+59,SCROLL,SCRLA2,Deafness
+60,SCROLL,SCRLA3,Glitterdust Glitterdust 
+61,SCROLL,SCRLAI,Ray of Enfeeblement 
+62,SCROLL,SCSNILL,Snilloc's Snowball Swarm 
+63,SCROLL,SCICE,Icelance 
+64,SCROLL,SCRL1D,Clairvoyance 
+65,SCROLL,SCRL1E,Dispel Magic 
+66,SCROLL,SCRL1F,Flame Arrow 
+67,SCROLL,SCRL1G,Fireball 
+68,SCROLL,SCRL1H,Haste 
+69,SCROLL,SCRL1I,Hold Person 
+70,SCROLL,SCRL1K,Lightning Bolt 
+71,SCROLL,SCRL1L,Monster Summoning I 
+72,SCROLL,SCRL1M,Non
+73,SCROLL,SCRL1N,Protection From Normal Missiles 
+74,SCROLL,SCRL1O,Slow 
+75,SCROLL,SCRL1P,Skull Trap 
+76,SCROLL,SCRL1Q,Vampiric Touch 
+77,SCROLL,SCRL1S,Dire Charm 
+78,SCROLL,SCRL1T,Ghost Armor 
+79,SCROLL,SCRL6H,Protection from Fire 
+80,SCROLL,SCRL6I,Protection from Cold
+81,SCROLL,SCRL6J,Spell Thrust
+82,SCROLL,SCRL6K,Detect Illusion
+83,SCROLL,SCRL6L,Hold Undead
+84,SCROLL,SCRLA5,Melf's Minute Meteors 
+85,SCROLL,SCRLA7,Remove Magic
+86,SCROLL,SCBLOO,Beltyn's Burning Blood 
+87,SCROLL,SCCOUR,Emotion
+88,SCROLL,SCEMOT,Emotion
+89,SCROLL,SCFEAR,Emotion
+90,SCROLL,SCHOPE,Emotion
+91,SCROLL,SCMALI,Greater Malison 
+92,SCROLL,SCOTIL,Otiluke's Resilient Sphere 
+93,SCROLL,SCREM,Remove Curse 
+94,SCROLL,SCRL1U,Confusion 
+95,SCROLL,SCRL1V,Dimension Door 
+96,SCROLL,SCRL1W,Fireshield 
+97,SCROLL,SCRL1Y,Improved Invisibility 
+98,SCROLL,SCRL1Z,Minor Globe of Invulnerability 
+99,SCROLL,SCRL2A,Monster Summoning II 
+100,SCROLL,SCRL5L,Polymorph Other 
+101,SCROLL,SCRL5M,Polymorph Self 
+102,SCROLL,SCRL6M,Enchanted Weapon 
+103,SCROLL,SCRL6N,Fireshield 
+104,SCROLL,SCRL6O,Secret Word 
+105,SCROLL,SCRL6P,Minor Sequencer 
+106,SCROLL,SCRL6Q,Teleport Field 
+107,SCROLL,SCRL6R,Spider Spawn 
+108,SCROLL,SCRLA1,Wizard Eye 
+109,SCROLL,SCRLA8,Contagion 
+110,SCROLL,SCRLAJ,Farsight 
+111,SCROLL,SCSHAD,Shadow Monsters 
+112,SCROLL,SCSPIR,Spirit Armor 
+113,SCROLL,SCSTON,Stoneskin 
+114,SCROLL,SCSTOR,Ice Storm 
+115,SCROLL,SCCEE,Conjure Earth Elemental 
+116,SCROLL,SCCFE,Conjure Fire Elemental 
+117,SCROLL,SCCHAO,Chaos 
+118,SCROLL,SCCWE,Conjure Water Elemental 
+119,SCROLL,SCDMS,Demi
+120,SCROLL,SCDOMI,Domination 
+121,SCROLL,SCFEEB,Feeblemind 
+122,SCROLL,SCHMON,Hold Monster 
+123,SCROLL,SCRL2D,Animate Dead 
+124,SCROLL,SCRL2E,Cloudkill 
+125,SCROLL,SCRL2F,Cone of Cold 
+126,SCROLL,SCRL2G,Monster Summoning III 
+127,SCROLL,SCRL2H,Shadow Door 
+128,SCROLL,SCRL5T,Protection from Electricity 
+129,SCROLL,SCRL6S,Spell Immunity 
+130,SCROLL,SCRL6T,Protection from Normal Weapons 
+131,SCROLL,SCRL6U,Breach 
+132,SCROLL,SCRL6W,Oracle 
+133,SCROLL,SCRL6X,Conjure Lesser Fire Elemental 
+134,SCROLL,SCRL6Y,Protection from Acid 
+135,SCROLL,SCRL6Z,Phantom Blade 
+136,SCROLL,SCRL7B,Conjure Lesser Air Elemental 
+137,SCROLL,SCRL7C,Conjure Lesser Earth Elemental 
+138,SCROLL,SCRL7D,Minor Spell Turning 
+139,SCROLL,SCRL8X,Spell Shield 
+140,SCROLL,SCSHRO,Shroud of Flame 
+141,SCROLL,SCSSHA,Summon Shadow 
+142,SCROLL,SCCLITE,Chain Lightning 
+143,SCROLL,SCAMS,Antimagic Shell 
+144,SCROLL,SCDFOG,Death Fog 
+145,SCROLL,SCDISI,Disintegrate 
+146,SCROLL,SCDSPEL,Death Spell 
+147,SCROLL,SCFTS,Flesh to Stone 
+148,SCROLL,SCGLOB,Globe of Invulnerability 
+149,SCROLL,SCISTAL,Invisible Stalker 
+150,SCROLL,SCLICH,Lich Touch 
+151,SCROLL,SCMSIV,Monster Summoning IV 
+152,SCROLL,SCOFS,Otiluke's Freezing Sphere 
+153,SCROLL,SCPWS,Power Word
+154,SCROLL,SCRL7J,Protection from Magic Energy 
+155,SCROLL,SCRL7K,Mislead 
+156,SCROLL,SCRL7L,Pierce Magic 
+157,SCROLL,SCRL7M,True Sight 
+158,SCROLL,SCRL7O,Protection from Magical Weapons 
+159,SCROLL,SCRL7Q,Improved Haste 
+160,SCROLL,SCRL7U,Contingency 
+161,SCROLL,SCRL7V,Spell Deflection 
+162,SCROLL,SCRL7W,Wyvern Call 
+163,SCROLL,SCRL7X,Conjure Fire Elemental 
+164,SCROLL,SCRL7Y,Conjure Air Elemental 
+165,SCROLL,SCRL7Z,Conjure Earth Elemental 
+166,SCROLL,SCRL8A,Carrion Summons 
+167,SCROLL,SCRL8B,Summon Nishruu 
+168,SCROLL,SCSHDS,Shades 
+169,SCROLL,SCSTF,Stone to Flesh 
+170,SCROLL,SCTENS,Tenser's Transformation 
+171,SCROLL,SCACID,Acid Storm 
+172,SCROLL,SCFING,Finger of Death 
+173,SCROLL,SCMALA,Malavon's Rage 
+174,SCROLL,SCMINVI,Mass Invisibility 
+175,SCROLL,SCMORD,Mordenkainen's Sword 
+176,SCROLL,SCMSV,Monster Summoning V 
+177,SCROLL,SCPRISM,Prismatic Spray 
+178,SCROLL,SCRL8D,Spell Turning 
+179,SCROLL,SCRL8E,Protection from the Elements 
+180,SCROLL,SCRL8F,Project Image 
+181,SCROLL,SCRL8G,Ruby Ray of Reversal 
+182,SCROLL,SCRL8H,Khelben's Warding Whip 
+183,SCROLL,SCRL8I,Cacofiend 
+184,SCROLL,SCRL8J,Mantle 
+185,SCROLL,SCRL8L,Spell Sequencer 
+186,SCROLL,SCRL8M,Sphere of Chaos 
+187,SCROLL,SCRL8N,Delayed Blast Fireball 
+188,SCROLL,SCRL8S,Summon Efreeti 
+189,SCROLL,SCRL8T,Summon Djinni 
+190,SCROLL,SCRL8U,Summon Hakeashar 
+191,SCROLL,SCRL8V,Control Undead 
+192,SCROLL,SCRLA4,Limited Wish 
+193,SCROLL,SCSTUN,Power Word
+194,SCROLL,SCBLANK,Mind Blank 
+195,SCROLL,SCINCIN,Incendiary Cloud 
+196,SCROLL,SCMSVI,Monster Summoning VI 
+197,SCROLL,SCRL8Y,Protection from Energy 
+198,SCROLL,SCRL8Z,Simulacrum 
+199,SCROLL,SCRL9A,Pierce Shield 
+200,SCROLL,SCRL9B,Summon Fiend 
+201,SCROLL,SCRL9C,Improved Mantle 
+202,SCROLL,SCRL9D,Spell Trigger 
+203,SCROLL,SCRL9F,Symbol
+204,SCROLL,SCRL9H,Maze 
+205,SCROLL,SCRLAO,Symbol
+206,SCROLL,SCRLAN,Symbol
+207,SCROLL,SCRLB1,Bigby's Clenched Fist 
+208,SCROLL,SCKILL,Power Word
+209,SCROLL,SCMSVII,Monster Summoning VII 
+210,SCROLL,SCRL9L,Spell Trap 
+211,SCROLL,SCRL9M,Spellstrike 
+212,SCROLL,SCRL9N,Gate 
+213,SCROLL,SCRL9P,Absolute Immunity 
+214,SCROLL,SCRL9Q,Chain Contingency 
+215,SCROLL,SCRL9R,Time Stop 
+216,SCROLL,SCRL9S,Imprisonment 
+217,SCROLL,SCRL9T,Meteor Swarm 
+218,SCROLL,SCRL9V,Wail of the Banshee 
+219,SCROLL,SCRL9W,Energy Drain 
+220,SCROLL,SCRL9X,Black Blade of Disaster 
+221,SCROLL,SCRL9Y,Shapechange 
+222,SCROLL,SCRL9Z,Freedom 
+223,SCROLL,SCRLB2,Bigby's Crushing Hand 
+224,SCROLL,SCRLB4,Wish 
+225,SCROLL,SPPR103C,Cure Light Wounds 
+226,SCROLL,SPPR105C,Entangle 
+227,SCROLL,SPPR108C,Remove Fear 
+228,SCROLL,SPPR201C,Aid 
+229,SCROLL,SPPR203C,Chant 
+230,SCROLL,SPPR205C,Find Traps 
+231,SCROLL,SPPR208C,Hold Person 
+232,SCROLL,SPPR211C,Silence
+233,SCROLL,SPPR212C,Slow Poison 
+234,SCROLL,SPPR214C,Cure Moderate Wounds 
+235,SCROLL,SPPR303C,Dispel Magic 
+236,SCROLL,SPPR304C,Glyph of Warding 
+237,SCROLL,SPPR306C,Protection From Fire 
+238,SCROLL,SPPR307C,Remove Curse 
+239,SCROLL,SPPR308C,Remove Paralysis 
+240,SCROLL,SPPR313C,Prayer 
+241,SCROLL,SPPR314C,Cure Disease 
+242,SCROLL,SCRL56,Cure Serious Wounds 
+243,SCROLL,SPPR404C,Neutralize Poison 
+244,SCROLL,SPPR407C,Protection From Lightning 
+245,SCROLL,SPPR412C,Static Charge 
+246,SCROLL,SCRL61,Cure Critical Wounds 
+247,SCROLL,SCRL62,Flame Strike 
+248,SCROLL,SPPR504C,Raise Dead 
+249,SCROLL,SPPR507C,Champion's Strength 
+250,SCROLL,SPPR510C,Insect Plague 
+251,SCROLL,SPPR512C,Spike Stones 
+252,SCROLL,SPPR606C,Fire Seeds 
+253,SCROLL,SPPR607C,Heal 
+254,SCROLL,SPPR608C,Sol's Searing Orb 
+255,SCROLL,SPPR704C,Creeping Doom 
+256,SCROLL,SPPR705C,Fire Storm 
+257,SCROLL,SPPR707C,Sunray 
+258,SCROLL,SPPR712C,Resurrection 
+259,SCROLL,SPPR714C,Symbol of Pain 

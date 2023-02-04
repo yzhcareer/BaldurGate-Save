@@ -1,0 +1,68 @@
+,Category,ItemCode,Item
+0,ARROW,ARHAND,Arrows of the Hand
+1,ARROW,AROW01,Arrows 
+2,ARROW,AROW02,Arrows +1
+3,ARROW,AROW03,Arrow of Slaying
+4,ARROW,AROW04,Acid Arrows
+5,ARROW,AROW05,Arrow of Biting
+6,ARROW,AROW06,Arrows of Detonation
+7,ARROW,AROW07,Arrows of Dispelling
+8,ARROW,AROW08,Arrow of Fire
+9,ARROW,AROW09,Arrows of Ice
+10,ARROW,AROW10,Arrows of Piercing
+11,ARROW,AROW11,Arrows +2
+12,ARROW,AROW12,Arrow of Biting
+13,ARROW,AROW1A,Arrows +2
+14,ARROW,AROWTRN,Translocation Arrows
+15,ARROW,HOLDFAST,Holdfast Arrows
+16,ARRPW,HQAROW,High Quality Arrows
+17,ARROW,UAROW2A,Hammer Arrows
+18,ARROW,UAROW3A,Confusion Arrows +3
+19,ARROW,UAROW3B,Hammer Arrow +1
+20,ARROW,UAROW3C,Piercing Arrows +1
+21,ARROW,UAROW4A,Inferno Arrows +2
+22,BOLT,BOLT01,Bolt
+23,BOLT,BOLT02,Bolt +1
+24,BOLT,BOLT03,Bolt of Lightning
+25,BOLT,BOLT04,Bolt of Biting
+26,BOLT,BOLT05,Bolt of Polymorphing
+27,BOLT,BOLT06,Bolt +2
+28,BOLT,HQBOLT,High Quality Bolt
+29,BOLT,TRNBOLT,Tranquil Bolt
+30,BULLET,BULL01,Bullet
+31,BULLET,BULL02,Bullet +1
+32,BULLET,BULL03,Bullet +2
+34,BULLET,UBULL4A,Bullets of Fire +2
+36,BAG,BAG02,gem bag
+37,BAG,BAG03,scroll case
+38,BAG,BAG31,bag of holding 
+39,BAG,BAG05,ammo belt
+40,BAG,BAG06,potion case
+41,BOOK,BOOK03,Manual of Bodily Health
+42,BOOK,BOOK04,Manual of Gainful Exercise
+43,BOOK,BOOK05,Manual of Quickness of Action
+44,BOOK,BOOK06,Tome of Clear Thought
+45,BOOK,BOOK07,Tome of Leadership and Influence
+46,BOOK,BOOK08,Tome of Understanding
+47,INSTRUMENT,BARDIC,Bardic Horn of Valhalla
+48,INSTRUMENT,CITTERN,The Cittern of War
+49,INSTRUMENT,LYRE,Lyre of Progression 
+50,INSTRUMENT,MHORN,The Merry Shorthorn
+51,INSTRUMENT,PELLON,The Dire Old Lute of Pellon Kay
+52,INSTRUMENT,SHAWM,Owain's Lullabye
+53,INSTRUMENT,VIOLIN,Viol of the Hollow Men
+54,WAND,WAND02,Wand of Fear
+55,WAND,WAND03,Wand of Magic Missiles
+56,WAND,WAND04,Wand of Paralyzation
+57,WAND,WAND05,Wand of Fire
+58,WAND,WAND06,Wand of Frost
+59,WAND,WAND07,Wand of Lightning
+60,WAND,WAND08,Wand of Sleep
+61,WAND,WAND10,Wand of Monster Summoning
+62,WAND,WAND11,Wand of the Heavens
+63,WAND,WAND12,Wand of Magic Missiles
+64,WAND,WANDARM,Wand of Armory
+65,WAND,WANDCOR,Wand of Corrosion
+66,WAND,WANDFRE,Wand of Freezing Death
+67,WAND,WANDMIS,Pemby's Wand of Many Missiles
+68,WAND,WANDTRP,Wand of Trap Detection
