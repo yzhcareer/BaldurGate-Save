@@ -1,0 +1,7 @@
+,Name,ValueLoc,Size,Signed,Order,RefTable,Optimize
+0,RacialEnemy,577,1,False,little,RACE,
+1,Kit,580,4,False,little,KIT,
+2,Race,626,1,False,little,RACE,
+3,Class,627,1,False,little,ClASS,
+4,Gender,629,1,False,little,GENDER,
+5,Alignment,635,1,False,little,ALIGNMENT,
