@@ -20,7 +20,7 @@ class Spells:
         THIEF_SET_SNARE = 'SPCL412'
         THIEF_SET_SPECIAL_SNARE = 'SPCL414'
 
-    class TOTEMIC(Enum):
+    class TOTEMICDRUID(Enum):
 
         TOTEMIC_DRUID_SUMMON_SPIRIT_ANIMAL = 'SPCL621'
 
@@ -336,12 +336,12 @@ class Spells:
 
         CAVALIER_REMOVE_FEAR = 'SPCL222'
 
-    class WILD(Enum):
+    class WILDMAGE(Enum):
 
         WILD_MAGIC_AREA = 'SPIN645'
         WILD_MAGIC_ZONE = 'SPIN778'
 
-    class LATHANDER(Enum):
+    class PRIESTLATHLANDER(Enum):
 
         LATHANDER_BOON = 'SPCL741'
         LATHANDER_HOLD_UNDEAD = 'SPCL742'
@@ -382,7 +382,7 @@ class Spells:
         DRUID_IMMUNE_POISON = 'SPCL924'
         DRUID_RESISTS = 'SPCL925'
 
-    class EVIL(Enum):
+    class EVILPALADIN(Enum):
 
         EVIL_LAYONHANDS = 'SPIN773'
 
@@ -400,7 +400,9 @@ class Spells:
         INNATE_LARLOCHS_MINOR_DRAIN = 'SPIN104'
         INNATE_HORROR = 'SPIN105'
         INNATE_VAMPIRIC_TOUCH = 'SPIN106'
-
+        INNATE_SLAYER_1 = 'SPIN822'
+        INNATE_SLAYER_2 = 'SPIN823'
+ 
     class DM(Enum):
 
         DM_SHIELD = 'SPIN650'
@@ -432,6 +434,7 @@ class Spells:
         ROGUE_GREATER_EVASION = 'SPCL914'
         ROGUE_ASSASINATION = 'SPCL916'
         ROGUE_AVOID_DEATH = 'SPCL917'
+        
 
     class BOOK(Enum):
 
@@ -653,18 +656,18 @@ class Spells:
         TRAP_SLIME = 'SPIN708'
         TRAP_SPEAR = 'SPIN709'
 
-    class TALOS(Enum):
+    class PRIESTTALOS(Enum):
 
         TALOS_STORMSHIELD = 'SPCL721'
         TALOS_LIGHTNING_BOLT = 'SPCL722'
 
-    class SUN(Enum):
+    class PRIESTSUN(Enum):
 
         SUN_SOUL_SUN_SOULRAY = 'SPCL236'
         SUN_SOUL_GREATER_SUN = 'SPCL237'
         SUN_SOUL_SUN_SOULBEAM = 'SPCL239'
 
-    class HELM(Enum):
+    class PRIESTHELM(Enum):
 
         HELM_RITUAL_SCROLL = 'SPIN592'
         HELM_SEEKING_SWORD = 'SPCL731'
@@ -727,10 +730,11 @@ CLERIC100 = [(Spells.CLERIC.CLERIC_CURE_LIGHT_WOUNDS, 30),
              
              (Spells.CLERIC.CLERIC_CONFUSION, 20),
              (Spells.CLERIC.CLERIC_CREEPING_DOOM, 5),
-             (Spells.CLERIC.CLERIC_EARTHQUAKE, 5),
+             (Spells.CLERIC.CLERIC_MASS_RAISE_DEAD, 5),
              (Spells.CLERIC.CLERIC_ETHER_GATE, 5),
              (Spells.CLERIC.CLERIC_ETHEREAL_RETRIBUTION, 5),
-             (Spells.CLERIC.CLERIC_FINGER_OF_DEATH, 10),
+             (Spells.CLERIC.CLERIC_FINGER_OF_DEATH, 5),
+             (Spells.CLERIC.CLERIC_IMPLOSION, 5),
              (Spells.CLERIC.CLERIC_GATE, 5),
              (Spells.CLERIC.CLERIC_RESTORATION, 10),
              (Spells.CLERIC.CLERIC_NATURE_BEAUTY, 5),
@@ -738,8 +742,8 @@ CLERIC100 = [(Spells.CLERIC.CLERIC_CURE_LIGHT_WOUNDS, 30),
              (Spells.CLERIC.CLERIC_SYMBOL_DEATH, 5),
              (Spells.CLERIC.CLERIC_SYMBOL_FEAR, 5),
              (Spells.CLERIC.CLERIC_SYMBOL_STUN, 5),
-             (Spells.CLERIC.CLERIC_SUNRAY, 5),
-             (Spells.CLERIC.CLERIC_FIRE_STORM, 5)]
+             (Spells.CLERIC.CLERIC_STORM_OF_VENGEANCE, 5),
+             (Spells.CLERIC.CLERIC_GREATER_ELEMENTAL_SWARM, 5)]
 
 WIZARD100 = [(Spells.WIZARD.WIZARD_ALARM, 20),
              (Spells.WIZARD.WIZARD_MAGIC_MISSILE, 50),
@@ -815,16 +819,18 @@ WIZARD100 = [(Spells.WIZARD.WIZARD_ALARM, 20),
              (Spells.WIZARD.WIZARD_SPELL_TRIGGER, 5),
              (Spells.WIZARD.WIZARD_SUMMON_FIEND, 5),
              
-             (Spells.WIZARD.WIZARD_ABSOLUTE_IMMUNITY, 10),
-             (Spells.WIZARD.WIZARD_BIGBYS_CRUSHING_HAND, 5),
+             (Spells.WIZARD.WIZARD_ABSOLUTE_IMMUNITY, 5),
+             (Spells.WIZARD.WIZARD_IMPROVED_ALACRITY, 10),
              (Spells.WIZARD.WIZARD_CHAIN_CONTINGENCY, 5),
-             (Spells.WIZARD.WIZARD_ENERGY_DRAIN, 5),
+             (Spells.WIZARD.WIZARD_SUMMON_PLANATAR_EVIL, 5),
              (Spells.WIZARD.WIZARD_FREEDOM, 10),
              (Spells.WIZARD.WIZARD_GATE, 5),
-             (Spells.WIZARD.WIZARD_IMPRISONMENT, 10),
+             (Spells.WIZARD.WIZARD_IMPRISONMENT, 5),
+             (Spells.WIZARD.WIZARD_SUMMON_PLANATAR_GOOD, 5),
              (Spells.WIZARD.WIZARD_METEOR_SWARM, 5),
              (Spells.WIZARD.WIZARD_POWER_WORD_KILL, 10),
              (Spells.WIZARD.WIZARD_TIME_STOP, 10),
              (Spells.WIZARD.WIZARD_WISH, 10),
-             (Spells.WIZARD.WIZARD_WAIL_OF_THE_BANSHEE, 10),
+             (Spells.WIZARD.WIZARD_WAIL_OF_THE_BANSHEE, 5),
+             (Spells.WIZARD.WIZARD_COMET, 5),
              (Spells.WIZARD.WIZARD_SPELL_TRAP, 5)]
